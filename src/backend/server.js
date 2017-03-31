@@ -13,7 +13,7 @@ const activeChatRoutes = require('./routes/activeChats');
 const messageRoutes = require('./routes/messages');
 const routes = require('./routes/routes');
 const passport = require('./passportConfig');
-const socketHandler = require('./socketConfig');
+const socketHandler = require('./socketConfig'); 
 
 const connect = process.env.MONGODB_URI;
 const DEVPORT = 3000;
