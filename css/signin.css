@@ -5,10 +5,9 @@
   border-radius : 3px  / 5px;
   -moz-border-radius : 3px  / 5px;
   -webkit-border-radius : 3px  / 5px;
-  width: 130%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-left: -15%;
 
 }
 
@@ -16,13 +15,13 @@
   display: flex;
   flex-direction:column;
   justify-content: center;
+  align-items: center;
   margin-top: 8%;
 }
 
 .ask_button{
   height: 8vh;
-  width: 130%;
-  margin-left: -15%;
+  width: 100%;
   flex:1;
   /*margin-left: auto;
   margin-right: auto;*/
@@ -49,8 +48,7 @@
 }
 
 .line{
-  width: 130%;
-  margin-left: -15%;
+  width: 100%;
   border-top: 1px solid grey;
 }
 
@@ -62,9 +60,9 @@
   border: 0;
   box-shadow:none;
   height: 10vh;
-  width: 130%;
-  margin-left: -15%;
+  width: 100%;
   display: flex;
+  margin-bottom: 5px;
 }
 
 .logo{

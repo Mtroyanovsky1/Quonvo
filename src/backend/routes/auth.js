@@ -1,16 +1,23 @@
 const express = require('express');
 const models = require('../models');
 
+const subjects = models.subjects;
 const router = express.Router();
 const User = models.User;
 
 module.exports = (passport) => {
   // You will use passport to authenticate in the future
   router.post('/auth/signup', (req, res) => {
+    let interests;
+    if (req.body.interests) {
+      interests = req.body.interests;
+    } else {
+      interests = subjects;
+    }
     new User({
       email: req.body.email.toLowerCase(),
       password: req.body.password,
-      interests: req.body.interests
+      interests
     })
     .save()
     .then(user => res.json({ success: true, user }))

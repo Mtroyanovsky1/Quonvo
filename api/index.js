@@ -41,7 +41,7 @@ const get = url =>
     });
 
 export const signIn = (email, password) => post(`${urlRoot}/auth/login`, { email, password });
-export const signup = (email, password, interests) => post(`${urlRoot}/auth/signup`, { email, password, interests });
+export const signUp = (email, password, interests) => post(`${urlRoot}/auth/signup`, { email, password, interests });
 export const google = () => get(`${urlRoot}/auth/google`);
 export const createChat = (content, questionId, bounty, asker) => post(`${urlRoot}/activeChats/new`, { content, questionId, bounty, asker });
 export const sendMessage = (chatId, content) => post(`${urlRoot}/messages/new`, { chatId, content });

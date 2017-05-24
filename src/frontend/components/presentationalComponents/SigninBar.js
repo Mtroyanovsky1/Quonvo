@@ -1,14 +1,13 @@
 import React from 'react';
 
-const SigninBar = ({ signIn }) => {
+const SigninBar = ({ signUp, google }) => {
   let emailField;
   let passField;
-
-  const signInClick = () => {
+  const signUpClick = () => {
     const submitEmail = emailField.value.trim();
     const submitPass = passField.value.trim();
     if (submitEmail && submitPass) {
-      signIn(submitEmail, submitPass);
+      signUp(submitEmail, submitPass);
     }
   };
   // const signUpClick = () => {
@@ -16,7 +15,7 @@ const SigninBar = ({ signIn }) => {
   // };
 
   const googleClick = () => {
-    // TODO write google click funciton
+    google();
   };
 
   return (
@@ -31,16 +30,16 @@ const SigninBar = ({ signIn }) => {
         ref={(node) => { passField = node; }}
         placeholder="password"
       />
-      <button onClick={() => signInClick()} className="ask_button"> LET&rsquo;S GO</button>
+      <button onClick={() => signUpClick()} className="ask_button"> Sign Up</button>
       <br />
       <div className="line" />
       <br />
-      <button className="google" type="submit" onClick={googleClick}>
-        <img alt="logo" className="logo" src="../assets/google_logo.png" />
-        <span className="signin">Sign in with Google</span>
+      <button className="google" type="submit" onClick={() => googleClick()}>
+        <img alt="logo" className="logo" src="assets/google_logo.png" />
+        <span className="signin">Continue with Google</span>
       </button>
 
-      <div className="explanation" style={{ 'font-size': '10px' }}>Already have an account? Log in <a> here </a> </div>
+      <div className="explanation">Already have an account? Log in <a> here </a> </div>
       <br />
     </div>
   );
