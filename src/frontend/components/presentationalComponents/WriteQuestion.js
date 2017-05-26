@@ -25,25 +25,29 @@ const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics }) => {
       }}
     >
       <div className="container">
+        <h2 className="genre_bold">QUESTION</h2>
         <textarea
           className="question"
           ref={(node) => { contentField = node; }}
           placeholder="Enter text here ..."
         />
-        <span>Handle</span>
+        <h2 className="genre_bold">HANDLE</h2>
         <input type="text" placeholder={defaultHandle} ref={(node) => { handleField = node; }} />
+        <h4 className="genre_bold"> SUBJECT </h4>
         <div className="genre">
-          <span className="genre_bold"> SUBJECT: </span>
-          <select
-            className="searchbar"
-            defaultValue={topics[0]}
-            onChange={(x) => { genre = x.target.value; }}
-          >
-            {topics.map(topic => <option key={topic} value={topic}>{topic}</option>)}
-          </select>
-        </div>
-        <div className="button_container">
-          <button className="answer_button" type="submit"> GET AN ANSWER </button>
+          <div className="subject">
+
+            <select
+              className="searchbar"
+              defaultValue={topics[0]}
+              onChange={(x) => { genre = x.target.value; }}
+            >
+              {topics.map(topic => <option key={topic} value={topic}>{topic}</option>)}
+            </select>
+          </div>
+          <div className="button_container">
+            <button className="answer_button" type="submit"> GET AN ANSWER </button>
+          </div>
         </div>
       </div>
 
