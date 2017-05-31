@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { signUp, google } from 'actions';
+import { signUp, google, signIn } from 'actions';
 import { SigninBar } from '../presentationalComponents';
-console.log(google)
-export default connect(null, { signUp, google })(SigninBar);
+
+export default connect(null, { signUp, google, signIn })(SigninBar);

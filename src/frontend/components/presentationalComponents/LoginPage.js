@@ -26,17 +26,14 @@ const signInClick = (email, password) => {
 const LoginPage = () => (
 
   <div className="display_container">
-    <span className="display_font"> Q</span>
     <div className="header_block">
-      <span className="explanation"> WELCOME TO </span>
-      <span className="explanation2"> Quonvo</span>
+      <span className="title"> WELCOME TO </span>
+      <span className="title2"> Quonvo</span>
       <SigninBarContainer />
 
     </div>
 
   </div>
-
-
   );
 
 

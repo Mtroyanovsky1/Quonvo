@@ -28,8 +28,8 @@ export const signIn = (email, password) => (/* dispatch */) => {
   });
 };
 
-export const signUp = (email, password, interests) => (/* dispatch */) => {
-  apiSignUp(email, password, interests)
+export const signUp = (email, password, name, interests) => (/* dispatch */) => {
+  apiSignUp(email, password, name, interests)
   .then((resp) => {
     if (!resp.success) {
       // success: false, message: message
@@ -51,7 +51,11 @@ export const google = () => (/* dispatch */) => {
   apiGoogle()
   .then((responseJson) => {
     console.log('responseJson', responseJson);
-
+    if (!responseJson) {
+      // TODO some error message
+    } else {
+      location.href = '/';
+    }
     // TODO dispatch something to my state saying I'm logged in?
     // TODO otherwise remove from actions and possibly remove SigninBarContainer
   })
