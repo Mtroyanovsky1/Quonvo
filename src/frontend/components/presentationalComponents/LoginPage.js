@@ -1,9 +1,10 @@
 import React from 'react';
-import { signIn } from 'api';
+import { signIn, signUp, google } from 'api';
 // NOTE at moment (4/26/17) the login app cannot import using the index.js files since they
 // cause import of everything, including containers that error without their presentationals
 // TODO investigate this and fix imports (both for js and css)
-import SigninBar from '../presentationalComponents/SigninBar';
+import SigninBarContainer from '../containerComponents/SigninBarContainer';
+
 
 const signInClick = (email, password) => {
   signIn(email, password)
@@ -25,17 +26,14 @@ const signInClick = (email, password) => {
 const LoginPage = () => (
 
   <div className="display_container">
-    <span className="display_font"> Q</span>
     <div className="header_block">
-      <span className="explanation"> WELCOME TO </span>
-      <span className="explanation2"> Quonvo</span>
-      <SigninBar signIn={signInClick} />
+      <span className="title"> WELCOME TO </span>
+      <span className="title2"> Quonvo</span>
+      <SigninBarContainer />
 
     </div>
 
   </div>
-
-
   );
 
 
