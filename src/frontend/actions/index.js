@@ -18,6 +18,7 @@ export const signIn = (email, password) => (/* dispatch */) => {
       // success: false, message: message
       // TODO dispatch action -> 'incorrect email or password' (don't be more descriptive)
     } else {
+      console.log('responseJson', resp);
       // success: true, user: mognoUserObject
       location.href = '/'; // this redirects you to '/'
     }
@@ -35,6 +36,7 @@ export const signUp = (email, password, name, interests) => (/* dispatch */) => 
       // success: false, message: message
       // TODO dispatch action -> 'incorrect email or password' (don't be more descriptive)
     } else {
+      console.log('responseJson', resp);
       // success: true, user: mognoUserObject
       location.href = '/'; // this redirects you to '/'
     }
