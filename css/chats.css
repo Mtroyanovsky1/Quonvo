@@ -1,4 +1,5 @@
 
+
 .chat_master {
   width: 65%;
   height: 93vh;
@@ -9,7 +10,7 @@
 .chat_part{
   height: 100%;
   display: flex;
-  background : rgba(255, 240, 222, 1);
+  background : #FFFFFF;
   border-radius: 15px;
   overflow:hidden;
   flex-direction: column;
@@ -43,7 +44,9 @@
     }
   }
 
-
+textarea{
+  background-color: lightgrey;
+}
 
 
 .center {
@@ -81,7 +84,7 @@
 }
 
 .wrapper{
-  flex: 0.7;
+  flex: 0.5;
   display: flex;
 justify-content: center;
 flex-direction: column;
@@ -104,6 +107,7 @@ align-items: center;
 
 .chat_body{
   overflow: scroll;
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -113,7 +117,7 @@ align-items: center;
 
 
 .wrapper2{
-  flex: 3;
+  flex: 2;
   display: flex;
   justify-content: center;
 }
@@ -144,25 +148,27 @@ align-items: center;
 }
 
 .wrapper3{
-  flex:0.5;
+  flex:0.75;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 
 
 .chat_response_body{
   flex: 6;
-  background : white;
+  background : #ffffff;
+  padding: 5px;
   resize: none;
   border: 0;
-  height: 60%;
-  padding: 1em;
-  max-height: 110%;
+  height: 50px;
+  max-height: 100%;
+  width: 100%;
   /*margin-right: 6%;*/
   font-size: 14px;
-  border-radius: 20px;
+  border-radius: 5px;
   -webkit-appearance:none;
-  margin-right: 1%;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 /*button {
@@ -289,16 +295,27 @@ margin-bottom: 20px;
     margin-left: 1em;
     }
 
+  .row3{
+    margin: 0px;
+    padding: 10px;
+    background-color: #E6E7E8;
+
+  }
+  .send_row{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
 .send_message{
   background : rgba(238, 203, 174, 1);
-  border-radius : 12px;
-  -moz-border-radius : 12px;
-  -webkit-border-radius : 12px;
-  margin: .4em;
+  border-radius : 5px;
+  -moz-border-radius : 5px;
+  -webkit-border-radius : 5px;
   display: flex;
+  height: 50px;
+  margin: 5px;
   justify-content: center;
   align-items: center;
-  padding: 1em;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
@@ -307,6 +324,17 @@ margin-bottom: 20px;
   -webkit-transition-property: transform;
   transition-property: transform;
   cursor: pointer;
+}
+.main_message{
+  border-radius : 5px;
+  -moz-border-radius : 5px;
+  -webkit-border-radius : 5px;
+  display: flex;
+  height: 50px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
