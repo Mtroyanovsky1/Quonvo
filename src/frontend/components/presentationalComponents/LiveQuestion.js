@@ -17,11 +17,11 @@ const LiveQuestion = ({
     onMouseLeave={() => onMouseOut()}
     style={questionShade ? { backgroundColor: questionShade } : null}
   >
-    <div className="question_text">
+    <div className="question_text" maxLength="40">
       {questionText}
     </div>
     { /* <span className="question_label"> {questionHandle} </span> */ }
-    <span className="question_label"> {questionSubject} </span>
+    <div className="question_label"> {questionSubject} </div>
   </div>
 );
 

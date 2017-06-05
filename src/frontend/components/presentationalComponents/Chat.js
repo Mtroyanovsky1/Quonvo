@@ -21,9 +21,11 @@ const Chat = ({
     <div className="chat_part">
       <div className="wrapper">
         <div onClick={() => minimizeChat(chatIndex)} className="chat_left_arrow">
-          <img alt="" src="assets/left-arrow.svg" className="icon" />
+          <img alt="" src="assets/left-arrow.svg" className="icon_arrow" />
         </div>
-
+        <div className="chat_intro bold">
+            Conversation with {chattingPartner}
+        </div>
         <div className="chat_top">
           <img
             alt=""
@@ -31,9 +33,6 @@ const Chat = ({
             src="assets/chat_profile_icon-01.png"
             onClick={() => minimizeChat(chatIndex)} // TODO make deicated minimize button
           />
-          <div className="chat_intro bold">
-              CONVERSATION WITH {chattingPartner}
-          </div>
         </div>
       </div>
       <MessagesBoxContainer chatIndex={chatIndex} />

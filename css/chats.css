@@ -48,6 +48,15 @@ textarea{
   background-color: lightgrey;
 }
 
+.icon_arrow{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: white;
+  padding: 5px;
+  color: #E6E7E8;
+}
 
 .center {
   flex: 1;
@@ -61,48 +70,48 @@ textarea{
   flex: 0.4;
 }
 
-.chat_top{
-  /*flex:0.7;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  border-bottom: 3px solid lightgrey;
-  display: flex;
-  flex-direction: row-reverse;
-  width: 90%;
-}
 
-.chat_left_arrow{
-    height: 20%;
-    width: 20%;
-    align-self: flex-start;
-    margin-left: 15px;
 
-}
+
 
 .chat_left_arrow:hover{
   opacity: 0.5;
 }
 
 .wrapper{
-  flex: 0.5;
+  flex: 0.4;
   display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: #E6E7E8;
+  border-bottom: 1px solid transparent;
 }
 
+.chat_left_arrow{
+    flex: 1;
+    align-self: center;
+    margin-left: 15px;
 
+}
 .chat_intro{
-  flex: 1;
+  flex: 4;
   color : black;
   text-align: left;
-  font-size: 2vw;
-  align-items: center;
+  font-size: 18px;
+  text-align: left;
   justify-content: center;
-  padding-top: 2vh;
-  max-width: 70%;
+  max-width: 100%;
   /*margin-top:auto;
   margin-bottom:auto;*/
+}
+.chat_top{
+
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .chat_body{
@@ -210,13 +219,15 @@ align-items: center;
     font-family : Roboto;
     font-size : 17px;
     font-weight : bold;
-    line-height : 17px;
     color : black;
     flex: 2;
     letter-spacing : 0.75px;
     padding: 1em;
     width: 100%;
     padding-left: 4.5%;
+    line-height: 2.5ex;
+    height: 7.5ex; /* 2.5ex for each visible line */
+    overflow: hidden;
 
 }
 
@@ -251,11 +262,10 @@ align-items: center;
 background-repeat : no-repeat;*/
 border-style: solid;
 border-color: black;
-border-width: 3px;
+border-width: 2px;
 border-radius: 50%;
-max-width:70px;
-max-height:70px;
-margin-bottom: 20px;
+max-width:  50%;
+max-height: 50%;
 }
 
 
