@@ -79,7 +79,7 @@ textarea{
 }
 
 .wrapper{
-  flex: 0.4;
+  flex: 0.3;
   display: flex;
   justify-content: center;
   flex-direction: row;
