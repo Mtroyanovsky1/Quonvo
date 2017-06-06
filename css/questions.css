@@ -11,6 +11,7 @@
 .yourQuestion{
   flex: 1;
   opacity: 0.5;
+  max-height: 50px;
 }
 .question_display{
   flex: 4;
@@ -116,15 +117,20 @@
 
 .question_text{
   font-family : Roboto;
-  font-size : 1.3vw;
+  font-size : 1vw;
   font-weight : bold;
-  line-height : 1.4vw;
   color : black;
   flex: 2;
   letter-spacing : 0.1vw;
   padding: 1em;
   padding-bottom: 2em;
   width: 85%;
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 2.6em;
+  line-height: 1.8em;
   /*padding-left: 4.5%;*/
 }
 
