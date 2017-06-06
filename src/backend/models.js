@@ -27,8 +27,10 @@ const userSchema = mongoose.Schema({
   rating: {
     type: Object,
     default: {
-      Stuff: 0,
-      Travel: 0
+      Academics: 0,
+      Travel: 0,
+      Entertainment: 0,
+      Advice: 0
     }
     // This is an object where each key is a subject and the value of that key is their rating
   },

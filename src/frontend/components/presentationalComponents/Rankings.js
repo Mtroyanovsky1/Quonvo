@@ -18,7 +18,7 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings }) => (
         </span>)
     }
     </div>
-    { listRankings.map(user =>
+    {listRankings.map(user =>
       <div className="archives_display">
         <div className="question_box" >
           <div className="archives_text"> {user.rank} </div>

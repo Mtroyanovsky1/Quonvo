@@ -93,6 +93,7 @@ export const getMyHandle = (state, index) => chatsSels.getMyHandle(state.chats, 
 export const getArchives = state => state.newArchives;
 export const areArchivesOpen = state => state.UIState === ARCHIVES;
 export const areRankingsOpen = state => state.UIState === RANKINGS;
+export const getRankings = state => state.newRankings;
 export const getUIstate = state => state.UIState;
 export const getVisibleChatIndex = (state) => {
   const [type, index] = getUIstate(state).split('-');

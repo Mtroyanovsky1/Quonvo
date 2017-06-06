@@ -119,6 +119,7 @@ const newRankings = rankings => ({
 export const newRankingsThunk = topic => (dispatch) => {
   apiGetRankings(topic)
   .then((respJson) => {
+    console.log('thunk', topic);
     dispatch(newRankings(respJson.rankings));
   })
   .catch((err) => {

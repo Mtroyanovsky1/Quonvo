@@ -23,6 +23,7 @@ class SideBarWrapper extends Component {
   onRankingsClick() {
     this.props.newRankingsThunk(this.props.topics[0]);
     this.props.fullRankings(); // Ask about Async stuff here
+    console.log('i got to rankings');
   }
 
   questionModalOpen() {
