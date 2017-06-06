@@ -1,21 +1,45 @@
 import {
    signIn as apiSignIn,
+   signUp as apiSignUp,
    sendMessage as apiSendMessage,
    createQuestion as apiCreateQuestion,
    hotQuestions as apiHotQuestions,
    getArchives as apiGetArchives,
-   getRankings as apiGetRankings
+   getRankings as apiGetRankings,
+   google as apiGoogle
    } from 'api';
 import { onQuestionCreate } from './chatActions';
 
 // thunk
 export const signIn = (email, password) => (/* dispatch */) => {
   apiSignIn(email, password)
-  .then((/* responseJson */) => {
-    // console.log('responseJson', responseJson);
+  .then((resp) => {
+    if (!resp.success) {
+      // success: false, message: message
+      // TODO dispatch action -> 'incorrect email or password' (don't be more descriptive)
+    } else {
+      console.log('responseJson', resp);
+      // success: true, user: mognoUserObject
+      location.href = '/'; // this redirects you to '/'
+    }
+  })
+  .catch((err) => {
+    // console.log('error');
+    throw err;
+  });
+};
 
-    // TODO dispatch something to my state saying I'm logged in?
-    // TODO otherwise remove from actions and possibly remove SigninBarContainer
+export const signUp = (email, password, name, interests) => (/* dispatch */) => {
+  apiSignUp(email, password, name, interests)
+  .then((resp) => {
+    if (!resp.success) {
+      // success: false, message: message
+      // TODO dispatch action -> 'incorrect email or password' (don't be more descriptive)
+    } else {
+      console.log('responseJson', resp);
+      // success: true, user: mognoUserObject
+      location.href = '/'; // this redirects you to '/'
+    }
   })
   .catch((err) => {
     // console.log('error');
@@ -24,6 +48,24 @@ export const signIn = (email, password) => (/* dispatch */) => {
 };
 // TODO make a thunk that hits API and uses id from response
 // or make it take an id and let whoever calls it do the saving
+
+export const google = () => (/* dispatch */) => {
+  apiGoogle()
+  .then((responseJson) => {
+    console.log('responseJson', responseJson);
+    if (!responseJson) {
+      // TODO some error message
+    } else {
+      location.href = '/';
+    }
+    // TODO dispatch something to my state saying I'm logged in?
+    // TODO otherwise remove from actions and possibly remove SigninBarContainer
+  })
+  .catch((err) => {
+    // console.log('error');
+    throw err;
+  });
+};
 
 const newMessage = (content, id, user) => ({
   type: 'NEW_MESSAGE',
