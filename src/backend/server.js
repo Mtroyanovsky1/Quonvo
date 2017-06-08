@@ -12,6 +12,7 @@ const questionRoutes = require('./routes/questions');
 const activeChatRoutes = require('./routes/activeChats');
 const messageRoutes = require('./routes/messages');
 const archivedChatRoutes = require('./routes/archivedChats');
+const userRoutes = require('./routes/user');
 const passport = require('./passportConfig');
 const socketHandler = require('./socketConfig');
 
@@ -82,6 +83,7 @@ app.use('/', questionRoutes);
 app.use('/', activeChatRoutes);
 app.use('/', messageRoutes);
 app.use('/', archivedChatRoutes);
+app.use('/', userRoutes);
 app.get('/assets/:asset', (req, res) => {
   res.sendFile(path.join(__dirname, `../../assets/${req.params.asset}`));
 });

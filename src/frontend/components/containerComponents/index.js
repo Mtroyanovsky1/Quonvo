@@ -7,3 +7,4 @@ export { default as WriteQuestionContainer } from './WriteQuestionContainer';
 export { default as SideBarContainer } from './SideBarContainer';
 export { default as TabsBarContainer } from './TabsBarContainer';
 export { default as ArchivesContainer } from './ArchivesContainer';
+export { default as RankingsContainer } from './RankingsContainer';
