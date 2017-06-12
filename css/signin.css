@@ -1,28 +1,64 @@
 .field{
 
-  background : #E6E7E8;
-  background : rgba(230, 231, 232, 1);
   border-radius : 3px  / 5px;
   -moz-border-radius : 3px  / 5px;
   -webkit-border-radius : 3px  / 5px;
-  width: 130%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-left: -15%;
+
+}
+.title {
+
+  font-family : Roboto;
+  font-size : 13px;
+  line-height : 20px;
+  letter-spacing : 0.1em;
+  color : #231F20;
+  color : rgb(35, 31, 32);
+
 
 }
 
+.title2 {
+  font-family: "Caslon Old Face Heavy BT", serif;
+  font-size : 60px;
+  line-height : 32px;
+  color : black;
+  z-index: 4000;
+
+}
+
+.header_block{
+  /*flex:1.7;*/
+  display: flex;
+  margin-top: 2%;
+  width: 26%;
+  flex-direction: column;
+align-items: center;
+padding-top: 1%;
+ /*padding-left: 4%;*/
+  position: absolute;
+  background : #FFFFFF;
+  background : rgba(255, 255, 255, 1);
+  border-radius : 12px;
+  -moz-border-radius : 12px;
+  -webkit-border-radius : 12px;
+
+}
 .signin_wrapper{
   display: flex;
   flex-direction:column;
   justify-content: center;
-  margin-top: 8%;
+  align-items: center;
+  margin-top: 15%;
+  width: 90%;
+  font-family: roboto;
 }
 
 .ask_button{
-  height: 8vh;
-  width: 130%;
-  margin-left: -15%;
+  width: 90%;
+  height: 35px;
   flex:1;
   /*margin-left: auto;
   margin-right: auto;*/
@@ -34,7 +70,7 @@
   -webkit-border-radius : 12px;
   border: 0;
   box-shadow:none;
-
+  transition: 0.3s;
   font-family : Roboto;
   font-weight: 900;
   font-size : 16px;
@@ -48,9 +84,13 @@
 
 }
 
+.ask_button:hover {
+  width: 95%;
+  background-color:rgba(190, 130, 103, 1);
+
+}
 .line{
-  width: 130%;
-  margin-left: -15%;
+  width: 100%;
   border-top: 1px solid grey;
 }
 
@@ -62,11 +102,15 @@
   border: 0;
   box-shadow:none;
   height: 10vh;
-  width: 130%;
-  margin-left: -15%;
+  width: 100%;
   display: flex;
+  margin-bottom: 5px;
+  transition: 0.3s;
 }
 
+.google:hover{
+  background: #AAB7B8;
+}
 .logo{
   max-height: 40px;
   flex: 0.15;
@@ -84,4 +128,25 @@
   /*flex: 3;*/
   margin-left: 10%;
   margin-top: 4.5%;
+}
+
+.form-label{
+  align-self: flex-start;
+  margin-left: 10px;
+  line-height: 12.76px;
+  font-size: .8em;
+  letter-spacing: 1.3px;
+
+}
+
+.logIn {
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: underline black;
+}
+
+.logIn:hover {
+  opacity: 0.5;
 }

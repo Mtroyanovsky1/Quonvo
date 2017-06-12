@@ -70,7 +70,7 @@ const socketHandler = (io, sessionStore) => (connection) => {
 
     socket.on('endChat', () => {
       if (!socket.room) {
-        socket.emit('sendResponse', { success: false, reason: 'There\'s no chat to end.' });
+        socket.emit('endChatResponse', { success: false, reason: 'There\'s no chat to end.' });
         return;
       }
 
