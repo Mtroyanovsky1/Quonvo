@@ -6,7 +6,6 @@ import {
    hotQuestions as apiHotQuestions,
    getArchives as apiGetArchives,
    getRankings as apiGetRankings,
-   google as apiGoogle
    } from 'api';
 import { onQuestionCreate } from './chatActions';
 
@@ -49,23 +48,24 @@ export const signUp = (email, password, name, interests) => (/* dispatch */) => 
 // TODO make a thunk that hits API and uses id from response
 // or make it take an id and let whoever calls it do the saving
 
-export const google = () => (/* dispatch */) => {
-  apiGoogle()
-  .then((responseJson) => {
-    console.log('responseJson', responseJson);
-    if (!responseJson) {
-      // TODO some error message
-    } else {
-      location.href = '/';
-    }
-    // TODO dispatch something to my state saying I'm logged in?
-    // TODO otherwise remove from actions and possibly remove SigninBarContainer
-  })
-  .catch((err) => {
-    // console.log('error');
-    throw err;
-  });
-};
+// export const google = () => (/* dispatch */) => {
+//   apiGoogle()
+//   .then((responseJson) => {
+//     console.log('responseJson', responseJson);
+//     if (!responseJson) {
+//       // TODO some error message
+//     } else {
+//       location.href = '/';
+//     }
+//     // TODO dispatch something to my state saying I'm logged in?
+//     // TODO otherwise remove from actions and possibly remove SigninBarContainer
+//   })
+//   .catch((err) => {
+//     // console.log('error');
+//     throw err;
+//   });
+// };
+
 
 const newMessage = (content, id, user) => ({
   type: 'NEW_MESSAGE',

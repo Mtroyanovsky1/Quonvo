@@ -45,6 +45,8 @@
   flex: 0.7;
   display: flex;
   border-bottom: solid 1px #e8e8e8;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .ranking_topic{
@@ -52,10 +54,44 @@
   padding: 5%;
   font-weight: bold;
   font-family: Roboto;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.ranking_topic:hover{
+  font-size: 18px;
+  opacity: 0.5;
 }
 
 .rankings_container{
   flex: 7;
+  overflow: scroll;
+  width: 98%;
+}
+
+.ranking{
+  border-bottom: solid 1px #e8e8e8;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+
+}
+
+.ranking_name{
+  margin-left: 50%;
+
+}
+
+.ranking_number{
+  margin-left: 10%;
+}
+
+.ranking_text{
+  letter-spacing: 1px;
+  font-family: Roboto;
+  font-weight : bold;
+  font-size: 20px;
 }
 
 @-webkit-keyframes slideIn {

@@ -150,12 +150,19 @@
   width: 90%;
   margin-bottom: 1em;
   border-bottom: solid 1px #e8e8e8;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav{
   flex: 1;
-  padding-left: 8%;
   cursor: pointer;
+  padding: 5%;
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 17px;
+  letter-spacing: 1px;
+
 }
 
 .back_to_archives {
@@ -172,7 +179,7 @@
 }
 .nav:hover {
   opacity: 0.5;
-  font-size: 1.6vw;
+  font-size: 18px;
 }
 
 .archives_display{
@@ -209,7 +216,6 @@
   font-family : Roboto;
   font-size : 2vh;
   font-weight : bold;
-  line-height : 1.4vw;
   color : black;
   flex: 2;
   letter-spacing : 0.1vw;

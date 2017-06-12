@@ -50,9 +50,6 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../../build/login.html'));
 });
 
-app.get('/google', (req, res) => {
-  res.redirect('/auth/google');
-});
 
 app.use(flash());
 app.use(logger('dev'));
