@@ -12,6 +12,9 @@
   flex: 1;
   opacity: 0.5;
   max-height: 50px;
+  width: 100%;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
 }
 .question_display{
   flex: 4;
@@ -27,11 +30,32 @@
 
 }
 .question_wrapper {
+  background-color: none;
 }
 
+
+.answer_button {
+  background-color: lightblue;
+  height: 40px;
+}
+.answer_name{
+  font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #231F20;
+}
+.name_input {
+  height: 40px;
+}
 .navigate_buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
-  margin-bottom: 10%;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 
@@ -65,13 +89,14 @@
 
 .questionTALL{
   display: flex;
+  min-width: 100%;
   flex-direction: column;
   background : #EECBAE;
   background : rgba(238, 203, 174, 1);
   border-radius : 12px;
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
-  /*height: 22vh;*/
+  padding: 15px;
   width: 200px;
   margin-bottom: 7%;
   position: relative;
@@ -120,18 +145,14 @@
   font-size : 1vw;
   font-weight : bold;
   color : black;
-  flex: 2;
+  flex: 1;
   letter-spacing : 0.1vw;
-  padding: 1em;
-  padding-bottom: 2em;
-  width: 85%;
   display: block; /* or inline-block */
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
-  max-height: 2.6em;
+  max-height: 3.6em;
   line-height: 1.8em;
-  /*padding-left: 4.5%;*/
 }
 
 .question_label{
@@ -140,20 +161,14 @@
   font-size : 13px;
   line-height : 23.95px;
   letter-spacing : 1px;
-  color : #A7A9AC;
-  color : rgb(167, 169, 172);
-  position:absolute;
-    bottom:0;
-    right:0;
-    padding-right: 1vw;
-    padding-bottom: 0.5vh;
+  color : #767676;
 
 }
 
 .question_bar{
   background : white;
   height: 100vh;
-  max-width: 20vw;
+  max-width: 25vw;
   flex: 1;
   /*overflow-y: auto;*/
   display: flex;
