@@ -33,6 +33,7 @@
   background-color: none;
 }
 
+
 .answer_button {
   background-color: lightblue;
   height: 40px;
@@ -88,6 +89,7 @@
 
 .questionTALL{
   display: flex;
+  min-width: 100%;
   flex-direction: column;
   background : #EECBAE;
   background : rgba(238, 203, 174, 1);
@@ -95,7 +97,7 @@
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
   padding: 15px;
-  width: 100%;
+  width: 200px;
   margin-bottom: 7%;
   position: relative;
   cursor: pointer;
@@ -166,7 +168,7 @@
 .question_bar{
   background : white;
   height: 100vh;
-  max-width: 20vw;
+  max-width: 25vw;
   flex: 1;
   /*overflow-y: auto;*/
   display: flex;
