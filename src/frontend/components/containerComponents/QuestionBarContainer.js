@@ -97,9 +97,19 @@ class QuestionBarWrapper extends Component {
           isOpen={this.state.answerModalActive}
           onRequestClose={() => this.closeModal()}
         >
-          <div>Answer this question under what name?</div>
-          <input type="text" placeholder="Anonymous" ref={(node) => { handleField = node; }} />
-          <button onClick={() => this.submitModal(handleField)}>Answer Question</button>
+          <div className="answer_name">NAME</div>
+          <input
+            className="name_input"
+            type="text"
+            placeholder="Anonymous"
+            ref={(node) => { handleField = node; }}
+          />
+          <button
+            className="answer_button"
+            onClick={() => this.submitModal(handleField)}
+          >
+            Answer Question
+          </button>
         </Modal>
         <QuestionBar {...newProps} />
       </div>

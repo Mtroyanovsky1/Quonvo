@@ -15,7 +15,7 @@ const TabsBar = ({ chats, openChat }) => (
               {chat.unreadMessages}
             </div>
           </div> : <div className="notification">
-            <div className="notification_number" style={{ backgroundColor: '#ededed' }} />
+            <div className="notification_number" style={{ backgroundColor: 'transparent' }} />
           </div> }
           <div className="chatting_partner bold">
             {`${chat.chattingPartner}`}
