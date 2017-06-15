@@ -3,7 +3,9 @@
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 1);
-  width: 75%;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 3vh;
   height: 93vh;
   border-radius : 15px;
   -moz-border-radius : 14px  / 15px;
@@ -33,7 +35,7 @@
 
 .rankings_arrow{
   transform: rotate(90deg);
-  margin-left: 20%;
+  margin-left: 58%;
   cursor: pointer;
 }
 

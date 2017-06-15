@@ -6,7 +6,8 @@ const Chat = ({
   chattingPartner,
   chatIndex,
   endChatClick,
-  minimizeChat
+  minimizeChat,
+  question
 }) => {
   let textArea;
   const clickSend = () => {
@@ -16,6 +17,8 @@ const Chat = ({
     }
     textArea.value = '';
   };
+
+  console.log('question', question);
 
   return (
     <div className="chat_part">
@@ -34,6 +37,9 @@ const Chat = ({
             onClick={() => minimizeChat(chatIndex)} // TODO make deicated minimize button
           />
         </div>
+      </div>
+      <div className="chat_question">
+        <span className="chatQuestion_text"> { question } </span>
       </div>
       <MessagesBoxContainer chatIndex={chatIndex} />
       <div className="row row3">

@@ -15,6 +15,7 @@
   width: 100%;
   padding-left: 1.5vw;
   padding-right: 1.5vw;
+  margin-bottom: 25%;
 }
 .question_display{
   flex: 4;

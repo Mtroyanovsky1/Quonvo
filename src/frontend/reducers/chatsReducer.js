@@ -2,7 +2,8 @@ import chatReducer, {
   getMessages as getChatMessages,
   getChattingPartner as getCCPartner,
   getRoom as getChatRoom,
-  getMyHandle as getChatHandle
+  getMyHandle as getChatHandle,
+  getQuestion as getChatQuestion
 } from './chatReducer';
 
 
@@ -13,6 +14,7 @@ const chats = (state = {}, action) => {
     case 'NEW_PARTNER':
     case 'JOIN_ROOM':
     case 'SET_HANDLE':
+    case 'SET_QUESTION':
     case 'NOTIFY_MESSAGE':
     case 'OPEN_CHAT': // clears unread messages
     // case 'MINIMIZE_CHAT':
@@ -40,4 +42,5 @@ export const getMessages = (theChats, index) => getChatMessages(getChat(theChats
 export const getChattingPartner = (theChats, index) => getCCPartner(getChat(theChats, index));
 export const getRoom = (theChats, index) => getChatRoom(getChat(theChats, index));
 export const getMyHandle = (theChats, index) => getChatHandle(getChat(theChats, index));
+export const getQuestion = (theChats, index) => getChatQuestion(getChat(theChats, index));
 // export const getChatOpen = (theChats, index) => getChatChatOpen(getChat(theChats, index));

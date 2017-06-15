@@ -41,12 +41,12 @@
  }
 
 .archive_fulldisplay{
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 3vh;
   display: flex;
   flex-direction: column;
-  width: 65%;
-  min-width: 30%;
+  width: 80%;
+  min-width: 40%;
   align-items: center;
   background : #FFFFFF;
   background : rgba(255, 255, 255, 1);

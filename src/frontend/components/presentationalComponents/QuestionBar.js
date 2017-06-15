@@ -39,7 +39,7 @@ const QuestionBar = ({
         {listOfQuestions.map(question =>
           <LiveQuestion
             key={question.id}
-            onQuestionClick={() => onQuestionClick(question.id, question.handle)}
+            onQuestionClick={() => onQuestionClick(question.id, question.handle, question.content)}
             onMouseOver={onMouseHover}
             onMouseOut={onMouseLeave}
             questionClickable={true}
