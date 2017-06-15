@@ -56,11 +56,13 @@ textarea{
   background-color: white;
   padding: 5px;
   color: #E6E7E8;
+  cursor:pointer;
 }
 
 .center {
   flex: 1;
   display: flex;
+
 }
 
 

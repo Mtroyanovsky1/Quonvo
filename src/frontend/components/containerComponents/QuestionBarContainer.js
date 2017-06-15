@@ -13,7 +13,12 @@ const howEarlyShouldWeLoad = -1; // TODO make a realistic value (see git issue #
 class QuestionBarWrapper extends Component {
   constructor(props) {
     super(props);
-    this.state = { answerModalActive: false, clickedQid: null, clickedQhandle: null };
+    this.state = {
+      answerModalActive: false,
+      clickedQid: null,
+      clickedQhandle: null,
+      clickedQquestion: null
+    };
   }
 
   componentDidMount() {
@@ -58,17 +63,32 @@ class QuestionBarWrapper extends Component {
   }
   submitModal(handleField) {
     const chosenHandle = handleField.value.trim() || 'Anonymous';
-
-    this.props.onQuestionClick(this.state.clickedQid, this.state.clickedQhandle, chosenHandle);
+    console.log('in container', this.state.clickedQquestion);
+    this.props.onQuestionClick(
+      this.state.clickedQid,
+      this.state.clickedQhandle,
+      chosenHandle,
+      this.state.clickedQquestion
+    );
     this.closeModal();
   }
 
-  openModal(id, theirHandle) {
-    this.setState({ answerModalActive: true, clickedQid: id, clickedQhandle: theirHandle });
+  openModal(id, theirHandle, theirQuestion) {
+    this.setState({
+      answerModalActive: true,
+      clickedQid: id,
+      clickedQhandle: theirHandle,
+      clickedQquestion: theirQuestion
+    });
   }
 
   closeModal() {
-    this.setState({ answerModalActive: false, clickedQid: null, clickedQhandle: null });
+    this.setState({
+      answerModalActive: false,
+      clickedQid: null,
+      clickedQhandle: null,
+      clickedQquestion: null
+    });
   }
 
   previousQuestion() {
@@ -81,7 +101,8 @@ class QuestionBarWrapper extends Component {
       {},
       this.props,
       {
-        onQuestionClick: (id, theirHandle) => this.openModal(id, theirHandle),
+        onQuestionClick: (id, theirHandle, theirQuestion) =>
+          this.openModal(id, theirHandle, theirQuestion),
         nextQuestionClick: () => this.nextQuestion(),
         previousQuestionClick: () => this.previousQuestion(),
         onMouseHover: () => this.onMouseHover(),

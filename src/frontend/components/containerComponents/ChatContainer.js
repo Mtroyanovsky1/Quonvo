@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import io from 'socket.io-client';
 
-import { sendMessage, receiveMessage, newChattingPartner, questionReady, endChatThunk, endChat, minimizeChat, notifyMessage } from 'actions/chatActions';
-import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages, getVisibleChatIndex, isQMine } from 'reducers';
+import { sendMessage, receiveMessage, newChattingPartner, questionReady, endChatThunk, endChat, minimizeChat, notifyMessage, questionThunk } from 'actions/chatActions';
+import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages, getVisibleChatIndex, isQMine, getQuestion } from 'reducers';
 import { Chat, Modal, PostChat } from '../presentationalComponents';
 
 
@@ -40,7 +40,9 @@ class ChatWrapper extends Component {
       this.state.socket.emit('joinQuestion', { room: this.props.room, handle: this.props.yourHandle });
     });
   }
-
+  componentDidMount() {
+    questionThunk(this.chatIndex);
+  }
   openModal(endedByMe) {
     this.setState({ modal: true, endedByMe });
   }
@@ -129,7 +131,8 @@ const mapStateToProps = (state, { chatIndex }) => ({
   yourHandle: getMyHandle(state, chatIndex),
   chatOpen: getVisibleChatIndex(state) === chatIndex, // getChatOpen(state, chatIndex),
   messages: getMessages(state, chatIndex),
-  iAmAsker: isQMine(state, chatIndex)
+  iAmAsker: isQMine(state, chatIndex),
+  question: getQuestion(state, chatIndex)
 });
 
 

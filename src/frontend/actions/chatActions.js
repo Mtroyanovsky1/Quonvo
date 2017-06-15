@@ -1,7 +1,8 @@
 // import { sendMessage as apiSendMessage } from 'api';
 import {
    updateQuestion as apiUpdateQuestion,
-   endChat as apiEndChat
+   endChat as apiEndChat,
+   getQuestion as apiGetQuestion
    } from 'api';
 // actions affecting an individual chat
 
@@ -27,8 +28,16 @@ export const endChat = chatIndex => ({ type: 'END_CHAT', chatIndex });
 export const newChattingPartner = (partner, chatIndex) => ({ type: 'NEW_PARTNER', partner, chatIndex });
 export const joinRoom = (room, chatIndex) => ({ type: 'JOIN_ROOM', room, chatIndex });
 export const setHandle = (handle, chatIndex) => ({ type: 'SET_HANDLE', handle, chatIndex });
+export const setQuestion = (question, chatindex) => ({ type: 'SET_QUESTION', question, chatindex });
 export const questionReady = () => ({ type: 'ANSWERER_FOUND' });
 export const clearYourQuestion = () => ({ type: 'CLEAR_YOUR_QUESTION' });
+
+export const questionThunk = questionId => (dispatch) => {
+  apiGetQuestion(questionId)
+  .then((questionContent) => {
+    dispatch(setQuestion(questionContent, questionId));
+  });
+};
 
 export const endChatThunk = (
   messages,
@@ -42,8 +51,10 @@ export const endChatThunk = (
   apiEndChat(messages, questionId, askerHandle, rating, questionAnswered);
 };
 
-export const onQuestionClick = (questionId, theirHandle, yourHandle) => (dispatch) => {
+export const onQuestionClick = (questionId, theirHandle, yourHandle, questionContent) =>
+(dispatch) => {
   dispatch(joinRoom(questionId, questionId));
+  dispatch(setQuestion(questionContent, questionId));
   dispatch(setHandle(yourHandle, questionId));
   dispatch(newChattingPartner(theirHandle, questionId));
   dispatch(openChat(questionId));

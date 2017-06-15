@@ -41,8 +41,8 @@ const get = url =>
     });
 
 export const signIn = (email, password) => post(`${urlRoot}/auth/login`, { email, password });
+export const google = () => (window.location = `${urlRoot}/auth/google`);
 export const signUp = (email, password, name, interests) => post(`${urlRoot}/auth/signup`, { email, password, name, interests });
-export const google = () => get(`${urlRoot}/auth/google`);
 export const createChat = (content, questionId, bounty, asker) => post(`${urlRoot}/activeChats/new`, { content, questionId, bounty, asker });
 export const sendMessage = (chatId, content) => post(`${urlRoot}/messages/new`, { chatId, content });
 export const createQuestion = (subject, content, handle) => post(`${urlRoot}/questions/new`, { subject, content, handle });
@@ -52,3 +52,4 @@ export const endChat = (messages, questionId, askerHandle, rating, questionAnswe
   post(`${urlRoot}/archivedChats/new`, { messages, questionId, askerHandle, rating, questionAnswered });
 export const getArchives = (subject, pageNumber, limit) => get(`${urlRoot}/archivedChats/get?limit=${limit}&subject=${subject}&pageNumber=${pageNumber}`);
 export const getRankings = topic => get(`${urlRoot}/rankings/get?topic=${topic}`);
+export const getQuestion = questionId => post(`${urlRoot}/questions/find`, { questionId });

@@ -35,7 +35,6 @@ class ArchivesWrapper extends Component {
 
   openMessages(messages) {
     this.setState({ getMessages: true, messages });
-    console.log('i got here');
   }
   render() {
     const newProps = Object.assign(

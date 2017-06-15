@@ -20,7 +20,7 @@ class RankingsWrapper extends Component {
   render() {
     return (
       <Rankings
-        topic={this.state.topic}
+        currentTopic={this.state.topic}
         setTopic={topic => this.setTopic(topic)}
         {...this.props}
       />
@@ -29,7 +29,7 @@ class RankingsWrapper extends Component {
 }
 
 const mapStateToProps = state => ({
-  rankings: getRankings(state),
+  listRankings: getRankings(state),
   topics: getTopics(state)
 });
 

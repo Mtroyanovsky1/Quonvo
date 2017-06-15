@@ -29,14 +29,14 @@ const Archives = ({
         if (currentTopic === topic) {
           return (<span
             style={{ opacity: 0.5, fontSize: '1.6vw' }}
-            className="nav bold"
+            className="nav"
             onClick={() => newTopic(topic, numberPerPage)}
           >
             { topic }
           </span>);
         }
         return (<span
-          className="nav bold"
+          className="nav"
           onClick={() => newTopic(topic, numberPerPage)}
         >
           { topic }

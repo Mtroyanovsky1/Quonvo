@@ -18,6 +18,14 @@ const myHandle = (state = 'defaultHandle', action) => {
   }
 };
 
+const question = (state = 'defaultQuestion', action) => {
+  switch (action.type) {
+    case 'SET_QUESTION':
+      return action.question;
+    default:
+      return state;
+  }
+};
 
 const messages = (state = [], action) => {
   switch (action.type) {
@@ -65,6 +73,7 @@ const individualChatReducer = combineReducers({
   /* chatopen,*/
   chatRoom,
   myHandle,
+  question,
   chattingPartner,
   messages,
   unreadMessages
@@ -81,3 +90,4 @@ export const getChattingPartner = state => state.chattingPartner;
 // export const getChatOpen = state => state.chatopen;
 export const getRoom = state => state.chatRoom;
 export const getMyHandle = state => state.myHandle;
+export const getQuestion = state => state.question;
