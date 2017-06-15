@@ -28,7 +28,6 @@ class ArchivesWrapper extends Component {
     this.setState({ getMessages: false });
   }
   newTopic(topic, numberPerPage) {
-    console.log('new topic function', topic)
     this.setState({ page: 0, topic, getMessages: false });
     const pageNumber = this.state.page;
     this.props.newArchivesThunk(topic, pageNumber, numberPerPage);
@@ -36,7 +35,6 @@ class ArchivesWrapper extends Component {
 
   openMessages(messages) {
     this.setState({ getMessages: true, messages });
-    console.log('i got here');
   }
   render() {
     const newProps = Object.assign(
