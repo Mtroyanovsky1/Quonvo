@@ -6,17 +6,22 @@ const defaultHandle = 'Anonymous';
 // when submit is clicked depending on the situation. Thus, we are writing
 // it as a purely presentational component, and whatever renders it will be
 // responsible for passing the onClick function in as a property
-const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics }) => {
+const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics, firstName }) => {
   let contentField;
   let genre = topics[0];
-  let handleField;
-
+  let name;
+  if (firstName) {
+    name = firstName;
+  } else {
+    name = 'Anonymous';
+  }
+  let handleField = name;
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
         const content = contentField.value.trim();
-        const handle = handleField.value.trim() || defaultHandle;
+        const handle = handleField.value || defaultHandle;
 
         if (content) {
           onSubmitQuestion(genre, content, handle);
@@ -33,12 +38,16 @@ const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics }) => {
           maxLength="150"
         />
         <h2 className="genre_bold">HANDLE</h2>
-        <input
-          maxLength="8"
-          type="text"
-          placeholder={defaultHandle}
-          ref={(node) => { handleField = node; }}
-        />
+        <select
+          // maxLength="8"
+          // type="text"
+          className="searchbar"
+          defaultValue={defaultHandle}
+          onChange={(w) => { handleField = w.target.value; }}
+        >
+          <option value={defaultHandle}> {defaultHandle} </option>
+          <option value={name}> {name} </option>
+        </select>
         <h4 className="genre_bold"> SUBJECT </h4>
         <div className="genre">
           <div className="subject">

@@ -6,6 +6,7 @@ import {
    hotQuestions as apiHotQuestions,
    getArchives as apiGetArchives,
    getRankings as apiGetRankings,
+   getUser as apiGetUser
    } from 'api';
 import { onQuestionCreate } from './chatActions';
 
@@ -66,6 +67,21 @@ export const signUp = (email, password, name, interests) => (/* dispatch */) => 
 //   });
 // };
 
+const newUser = user => ({
+  type: 'NEW_USER',
+  user
+});
+
+export const newUserThunk = () => (dispatch) => {
+  apiGetUser()
+  .then((resp) => {
+    dispatch(newUser(resp.user));
+  })
+  .catch((err) => {
+    // console.log('error');
+    throw err;
+  });
+};
 
 const newMessage = (content, id, user) => ({
   type: 'NEW_MESSAGE',

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { newUserThunk } from 'actions';
 import { getChats, areArchivesOpen, areRankingsOpen } from 'reducers';
 import io from 'socket.io-client';
 import { ParentPage } from '../presentationalComponents';
@@ -15,6 +16,9 @@ class ParentPageWrapper extends Component {
     });
   }
 
+  componentDidMount() {
+    this.props.newUser();
+  }
   render() {
     return (
       <ParentPage {...this.props} />
@@ -30,4 +34,4 @@ const mapStateToProps = state => ({
   rankings: areRankingsOpen(state)
 });
 
-export default connect(mapStateToProps, null)(ParentPageWrapper);
+export default connect(mapStateToProps, { newUser: newUserThunk })(ParentPageWrapper);
