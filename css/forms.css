@@ -91,7 +91,6 @@ textarea {
   /*height: 5vh;*/
   height: 5vh;
   padding-left: 1em;
-  flex: 1;
   border:none;
   font-size: 15px;
 }

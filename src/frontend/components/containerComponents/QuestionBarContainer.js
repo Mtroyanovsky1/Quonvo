@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat } from 'actions/chatActions';
-import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady } from 'reducers';
+import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUser } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage } from 'actions';
 import { QuestionBar, Modal } from '../presentationalComponents';
 
@@ -109,7 +109,14 @@ class QuestionBarWrapper extends Component {
         onMouseLeave: () => this.onMouseLeave()
       }
     );
-    let handleField;
+    let name;
+
+    if (this.props.firstName) {
+      name = this.props.firstName;
+    } else {
+      name = 'Anonymous';
+    }
+    let handleField = name;
 
     return (
       <div className="question_wrapper">

@@ -34,4 +34,12 @@ router.get('/rankings/get', (req, res) => {
 });
 // Routes go here
 
+router.get('/user/get', (req, res) => {
+  const user = req.user;
+  res.json({
+    success: true,
+    user
+  });
+});
+
 module.exports = router;

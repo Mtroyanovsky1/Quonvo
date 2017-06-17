@@ -29,6 +29,15 @@ const yourQuestion = (state = emptyYourQuestion, action) => {
   }
 };
 
+const newUser = (state = null, action) => {
+  switch (action.type) {
+    case 'NEW_USER':
+      return action.user;
+    default:
+      return state;
+  }
+};
+
 const newArchives = (state = [], action) => {
   switch (action.type) {
     case 'NEW_ARCHIVES':
@@ -75,7 +84,15 @@ const UIState = (state = EMPTY, action) => {
 };
 
 export default combineReducers({
-  chats, questions, currentQuestionPage, yourQuestion, newArchives, UIState, newRankings, topics
+  chats,
+  questions,
+  currentQuestionPage,
+  yourQuestion,
+  newArchives,
+  UIState,
+  newRankings,
+  topics,
+  newUser
 });
 
 // selectors
@@ -83,6 +100,7 @@ export const getQuestions = state => state.questions;
 export const getYourQuestion = state => state.yourQuestion.question;
 export const getYourQuestionReady = state => state.yourQuestion.ready;
 export const getCurrentQuestionPage = state => state.currentQuestionPage;
+export const getUser = state => state.newUser;
 export const getChats = state => state.chats;
 export const getChat = (state, index) => chatsSels.getChat(state.chats, index);
 export const getMessages = (state, index) => chatsSels.getMessages(state.chats, index);
