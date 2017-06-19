@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { newUserThunk } from 'actions';
 import { getChats, areArchivesOpen, areRankingsOpen } from 'reducers';
 import io from 'socket.io-client';
-import { ParentPage } from '../presentationalComponents';
+import ParentPage from '../presentationalComponents/ParentPage';
 
 class ParentPageWrapper extends Component {
   constructor(props) {

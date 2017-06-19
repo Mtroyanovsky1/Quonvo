@@ -1,4 +1,5 @@
 import React from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import ArchivedQuestion from './ArchivedQuestion';
 import ArchivedConversation from '../presentationalComponents/ArchivedConversation';
 
@@ -49,13 +50,18 @@ const Archives = ({
       ?
         <ArchivedConversation messages={messages} backToArchives={() => backToArchives()} />
       :
-        archives.map(archive =>
-          <ArchivedQuestion
-            archive={archive}
-            key={archive.id}
-            onClick={() => openMessages(archive.messages)}
-          />
-        )
+        <InfiniteScroll
+          next={nextPage(numberPerPage)}
+          loader={<h4>Loading...</h4>}
+        > {console.log('hi')}
+          {archives.map(archive =>
+            <ArchivedQuestion
+              archive={archive}
+              key={archive.id}
+              onClick={() => openMessages(archive.messages)}
+            />
+          )}
+        </InfiniteScroll>
       }
     </div>
     {areMessagesOpen ? <div /> :

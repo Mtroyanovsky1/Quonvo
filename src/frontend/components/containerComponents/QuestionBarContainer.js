@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat } from 'actions/chatActions';
-import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUser } from 'reducers';
+import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage } from 'actions';
-import { QuestionBar, Modal } from '../presentationalComponents';
+import QuestionBar from '../presentationalComponents/QuestionBar';
+import Modal from '../presentationalComponents/Modal';
+
 
 const limit = 1000;
 const questionRefresh = 1000000; // TODO make a realistic value

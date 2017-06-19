@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { getTopics } from 'reducers';
 import { fullArchives, newArchivesThunk, fullRankings, newRankingsThunk } from 'actions';
-import { SideBar, Modal } from '../presentationalComponents/';
-import { WriteQuestionContainer } from '../containerComponents';
+import SideBar from '../presentationalComponents/SideBar';
+import Modal from '../presentationalComponents/Modal';
+import WriteQuestionContainer from '../containerComponents/WriteQuestionContainer';
 // TODO add UI actions for the minimizing and such
 
 const numberPerPage = 5;
