@@ -7,7 +7,7 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings, currentTopic 
       <div className="Rankings_header">
         <span className="header_text"> Rankings </span>
         <div onClick={() => closeRankings()} className="rankings_arrow">
-          <img alt="" src="assets/arrow-01.png" className="icon" />
+          <img alt="" src="assets/arrow-01.png" className="icon_ranking_arrow" />
         </div>
       </div>
       <div className="rankings_subjects">
@@ -34,7 +34,7 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings, currentTopic 
         {listRankings.map((ranking) => {
           counter++;
           return (<div className="ranking">
-            <span className="ranking_text ranking_number"> {counter} </span>
+            <span className="ranking_text ranking_number"> {counter}. </span>
             <span className="ranking_text ranking_name"> {ranking.name} </span>
           </div>);
         })
