@@ -52,10 +52,10 @@ const QuestionBar = ({
       </div>
     </div>
     <ButtonGroup className="navigate_buttons">
-      <Button onClick={() => previousQuestionClick()} bsSize="large">
+      <Button className="navigate_button" onClick={() => previousQuestionClick()} bsSize="large">
       Previous
       </Button>
-      <Button onClick={() => nextQuestionClick()} bsSize="large">
+      <Button className="navigate_button" onClick={() => nextQuestionClick()} bsSize="large">
       Next
       </Button>
     </ButtonGroup>

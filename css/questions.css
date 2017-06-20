@@ -3,7 +3,7 @@
   flex: 0.4;
   color : black;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.2em;
   padding-top: 5vh;
   max-width: 85%;
 }
@@ -54,9 +54,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 100%;
-  margin-bottom: 10px;
+  height: 30px;
+  background-color: green;
+  width: 80%;
+  margin-bottom: 15px;
+  border: transparent;
+}
+
+
+.navigate_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 90%;
+  font-weight: boldf;
+  font-size: 12px;
+  padding: 0;
+  background-color: lightblue;
+  border: transparent;
 }
 
 
@@ -98,7 +114,8 @@
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
   padding: 15px;
-  width: 200px;
+  width: 90%;
+  max-width: 200px;
   margin-bottom: 7%;
   position: relative;
   cursor: pointer;
@@ -143,7 +160,7 @@
 
 .question_text{
   font-family : Roboto;
-  font-size : 1vw;
+  font-size : 1em;
   font-weight : bold;
   color : black;
   flex: 1;
@@ -154,6 +171,40 @@
   overflow: hidden;
   max-height: 3.6em;
   line-height: 1.8em;
+}
+
+@media (max-width: 800px) {
+  .question_text{
+    font-family : Roboto;
+    font-size : 1em;
+    font-weight : bold;
+    color : black;
+    flex: 1;
+    letter-spacing : 0.1vw;
+    display: block; /* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 7.2em;
+    line-height: 1.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  .question_text{
+    font-family : Roboto;
+    font-size : 1em;
+    font-weight : bold;
+    color : black;
+    flex: 1;
+    letter-spacing : 0.1vw;
+    display: block; /* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 9.0em;
+    line-height: 1.8em;
+  }
 }
 
 .question_label{
@@ -182,6 +233,26 @@
   z-index: 5;
 
 }
+
+@media (max-width: 850px) {
+  .question_bar{
+    background : white;
+    height: 100vh;
+    max-width: 35vw;
+    flex: 1;
+    /*overflow-y: auto;*/
+    display: flex;
+    align-self: left;
+    flex-direction: column;
+    align-items: center;
+    /*position: relative;*/
+    position: relative;
+    border-radius: 0px 35px 0px 0px;
+    z-index: 5;
+
+  }
+}
+
 
 .question_sidebar_display{
   flex: 4;

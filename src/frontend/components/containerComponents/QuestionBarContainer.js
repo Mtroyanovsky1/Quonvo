@@ -130,6 +130,7 @@ class QuestionBarWrapper extends Component {
             className="name_input"
             type="text"
             placeholder="Anonymous"
+            maxLength="10"
             ref={(node) => { handleField = node; }}
           />
           <button

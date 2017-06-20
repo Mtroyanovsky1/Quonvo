@@ -1,10 +1,11 @@
 .RankingsContainer{
   flex-direction: column;
   display: flex;
+  /*flex: 1;*/
   align-items: center;
   background: rgba(255, 255, 255, 1);
-  width: 80%;
-  margin-left: 5%;
+  width: 70%;
+  margin-left: 7%;
   margin-top: 3vh;
   height: 93vh;
   border-radius : 15px;
@@ -18,24 +19,40 @@
 .Rankings_header{
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 0.3;
+  width: 100%;
+  padding: 25px 25px 0px 25px;
 }
 
 .header_text{
-  font-family: Caslon Old Face Heavy BT;
+  flex: 5;
+  display: flex;
+  font-family: Roboto;
   font-weight : bold;
   /*font-size: 1.5vw;*/
-  font-size: 50px;
+  font-size: 45px;
   /*line-height: 2.7vw;*/
   /*line-height: 50px;*/
   letter-spacing : 0.05vw;
   color : #231F20;
   color : rgb(35, 31, 32);
+
 }
 
 .rankings_arrow{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /*transform: rotate(90deg);*/
+  /*margin-left: 58%;*/
+  cursor: pointer;
+}
+.icon_ranking_arrow{
+  text-align: right;
+  height: 30px;
+  width: 30px;
   transform: rotate(90deg);
-  margin-left: 58%;
+  /*margin-left: 58%;*/
   cursor: pointer;
 }
 
@@ -43,50 +60,60 @@
   opacity: 0.5;
 }
 .rankings_subjects{
-  width: 90%;
-  flex: 0.7;
+  width: 100%;
+  flex: 0.1;
   display: flex;
+  padding: 25px;
   border-bottom: solid 1px #e8e8e8;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .ranking_topic{
   cursor: pointer;
-  padding: 5%;
+  flex: 1;
   font-weight: bold;
   font-family: Roboto;
-  font-size: 17px;
+  font-size: 14px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .ranking_topic:hover{
-  font-size: 18px;
+  font-size: 15px;
   opacity: 0.5;
 }
 
 .rankings_container{
-  flex: 7;
+  flex: 5;
   overflow: scroll;
-  width: 98%;
+  display: flex;
+  width: 100%;
+  /*padding: 0px 10px 0px 10px;*/
+  flex-direction: column;
+  background-color: lightgrey;
 }
 
 .ranking{
-  border-bottom: solid 1px #e8e8e8;
-  display: flex;
   align-items: center;
-  height: 100px;
+  height: 200px;
   width: 100%;
+  /*margin: 5px 0px 5px 0px;*/
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid lightblue;
+  padding: 20px;
+
 
 }
 
 .ranking_name{
-  margin-left: 50%;
+  flex: 5;
 
 }
 
 .ranking_number{
-  margin-left: 10%;
+  flex: 1
 }
 
 .ranking_text{
