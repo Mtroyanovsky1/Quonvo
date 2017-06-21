@@ -3,7 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import ArchivedQuestion from './ArchivedQuestion';
 import ArchivedConversation from '../presentationalComponents/ArchivedConversation';
 
-const numberPerPage = 5;
+const numberPerPage = 10;
 
 const Archives = ({
   archives,
@@ -53,7 +53,9 @@ const Archives = ({
         <InfiniteScroll
           next={nextPage(numberPerPage)}
           loader={<h4>Loading...</h4>}
-        > {console.log('hi')}
+          hasMore={false}
+          height={500}
+        >
           {archives.map(archive =>
             <ArchivedQuestion
               archive={archive}

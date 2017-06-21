@@ -41,7 +41,7 @@ const newUser = (state = null, action) => {
 const newArchives = (state = [], action) => {
   switch (action.type) {
     case 'NEW_ARCHIVES':
-      return action.archives;
+      return state.concat(action.archives);
     default:
       return state;
   }
@@ -51,6 +51,19 @@ const newRankings = (state = [], action) => {
   switch (action.type) {
     case 'NEW_RANKINGS':
       return action.rankings;
+    default:
+      return state;
+  }
+};
+
+const pageNumber = (state = 0, action) => {
+  switch (action.type) {
+    case 'NEXT_PAGE':
+      return state + 1;
+    case 'PREVIOUS_PAGE':
+      return state - 1;
+    case 'PAGE_ZERO':
+      return 0;
     default:
       return state;
   }
@@ -92,7 +105,8 @@ export default combineReducers({
   UIState,
   newRankings,
   topics,
-  newUser
+  newUser,
+  pageNumber
 });
 
 // selectors
@@ -114,6 +128,7 @@ export const areArchivesOpen = state => state.UIState === ARCHIVES;
 export const areRankingsOpen = state => state.UIState === RANKINGS;
 export const getRankings = state => state.newRankings;
 export const getUIstate = state => state.UIState;
+export const getPageNumber = state => state.pageNumber;
 export const getVisibleChatIndex = (state) => {
   const [type, index] = getUIstate(state).split('-');
   return type === 'chat' ? index : null;

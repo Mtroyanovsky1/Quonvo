@@ -1,26 +1,29 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { getArchives, getTopics } from 'reducers';
-import { newArchivesThunk, closeArchives } from 'actions';
+import { getArchives, getTopics, getPageNumber } from 'reducers';
+import { newArchivesThunk, closeArchives, nextPage, pageZero, previousPage } from 'actions';
 import Archives from '../presentationalComponents/Archives';
 
 class ArchivesWrapper extends Component {
   constructor(props) {
     super(props);
-    this.state = { page: 0, topic: props.topics[0], getMessages: false, messages: null };
+    this.state = {
+      topic: props.topics[0],
+      getMessages: false,
+      messages: null
+    };
   }
 
   nextPage(numberPerPage) {
-    const nextPage = this.state.page + 1;
-    this.setState({ page: nextPage });
-    const pageNumber = this.state.page;
+    console.log('I HAVE A HUGE Head')
+    const pageNumber = this.props.pageNumber;
+    this.props.nextPage();
     this.props.newArchivesThunk(this.state.topic, pageNumber, numberPerPage);
   }
 
   previousPage(numberPerPage) {
-    const previousPage = this.state.page - 1;
-    this.setState({ page: previousPage });
-    const pageNumber = this.state.page;
+    const pageNumber = this.props.pageNumber;
+    this.props.previousPage();
     this.props.newArchivesThunk(this.state.topic, pageNumber, numberPerPage);
   }
 
@@ -28,8 +31,9 @@ class ArchivesWrapper extends Component {
     this.setState({ getMessages: false });
   }
   newTopic(topic, numberPerPage) {
-    this.setState({ page: 0, topic, getMessages: false });
-    const pageNumber = this.state.page;
+    pageZero();
+    this.setState({ topic, getMessages: false });
+    const pageNumber = this.props.pageNumber;
     this.props.newArchivesThunk(topic, pageNumber, numberPerPage);
   }
 
@@ -59,7 +63,14 @@ class ArchivesWrapper extends Component {
 
 const mapStateToProps = state => ({
   archives: getArchives(state),
-  topics: getTopics(state)
+  topics: getTopics(state),
+  pageNumber: getPageNumber(state)
 });
 
-export default connect(mapStateToProps, { newArchivesThunk, closeArchives })(ArchivesWrapper);
+export default connect(mapStateToProps, {
+  newArchivesThunk,
+  closeArchives,
+  nextPage,
+  pageZero,
+  previousPage
+})(ArchivesWrapper);
