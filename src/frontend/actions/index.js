@@ -171,10 +171,18 @@ export const pageZero = () => ({
   type: 'PAGE_ZERO'
 });
 
+export const loading = () => ({
+  type: 'IS_LOADING'
+});
+
+export const doneLoading = () => ({
+  type: 'DONE_LOADING'
+});
 export const newArchivesThunk = (subject, pageNumber, limit) => (dispatch) => {
+  dispatch(loading());
   apiGetArchives(subject, pageNumber, limit)
   .then((respJson) => {
-    console.log(respJson);
+    dispatch(doneLoading());
     dispatch(newArchives(respJson.archives));
     return respJson;
   })

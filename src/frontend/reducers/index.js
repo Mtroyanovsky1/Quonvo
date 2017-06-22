@@ -41,7 +41,17 @@ const newUser = (state = null, action) => {
 const newArchives = (state = [], action) => {
   switch (action.type) {
     case 'NEW_ARCHIVES':
-      return state.concat(action.archives);
+      return action.archives;
+    default:
+      return state;
+  }
+};
+const loading = (state = false, action) => {
+  switch (action.type) {
+    case 'IS_LOADING':
+      return true;
+    case 'DONE_LOADING':
+      return false;
     default:
       return state;
   }
@@ -106,7 +116,8 @@ export default combineReducers({
   newRankings,
   topics,
   newUser,
-  pageNumber
+  pageNumber,
+  loading
 });
 
 // selectors
@@ -116,6 +127,7 @@ export const getYourQuestionReady = state => state.yourQuestion.ready;
 export const getCurrentQuestionPage = state => state.currentQuestionPage;
 export const getUser = state => state.newUser;
 export const getChats = state => state.chats;
+export const getLoading = state => state.loading;
 export const getChat = (state, index) => chatsSels.getChat(state.chats, index);
 export const getMessages = (state, index) => chatsSels.getMessages(state.chats, index);
 export const getChattingPartner = (state, idx) => chatsSels.getChattingPartner(state.chats, idx);

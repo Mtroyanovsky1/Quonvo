@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { getArchives, getTopics, getPageNumber } from 'reducers';
+import { getArchives, getTopics, getPageNumber, getLoading } from 'reducers';
 import { newArchivesThunk, closeArchives, nextPage, pageZero, previousPage } from 'actions';
 import Archives from '../presentationalComponents/Archives';
 
@@ -15,7 +15,6 @@ class ArchivesWrapper extends Component {
   }
 
   nextPage(numberPerPage) {
-    console.log('I HAVE A HUGE Head')
     const pageNumber = this.props.pageNumber;
     this.props.nextPage();
     this.props.newArchivesThunk(this.state.topic, pageNumber, numberPerPage);
@@ -64,7 +63,8 @@ class ArchivesWrapper extends Component {
 const mapStateToProps = state => ({
   archives: getArchives(state),
   topics: getTopics(state),
-  pageNumber: getPageNumber(state)
+  pageNumber: getPageNumber(state),
+  loading: getLoading(state)
 });
 
 export default connect(mapStateToProps, {

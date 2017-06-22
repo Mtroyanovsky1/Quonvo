@@ -7,7 +7,7 @@ import Modal from '../presentationalComponents/Modal';
 import WriteQuestionContainer from '../containerComponents/WriteQuestionContainer';
 // TODO add UI actions for the minimizing and such
 
-const numberPerPage = 5;
+const numberPerPage = 1000;
 
 class SideBarWrapper extends Component {
   constructor(props) {

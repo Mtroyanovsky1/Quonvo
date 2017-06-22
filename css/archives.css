@@ -29,6 +29,10 @@
  animation-fill-mode: both;
 }
 
+.loader {
+  margin-bottom: 20px;
+}
+
 @keyframes fadeAndScale {
  from {
      opacity: 0;
