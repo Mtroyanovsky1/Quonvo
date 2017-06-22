@@ -29,6 +29,10 @@
  animation-fill-mode: both;
 }
 
+.loader {
+  margin-bottom: 20px;
+}
+
 @keyframes fadeAndScale {
  from {
      opacity: 0;
@@ -189,8 +193,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow:auto;
-  overflow-y: auto;
+  overflow:scroll;
+  overflow-y: scroll;
   padding-top: 1em;
 }
 
@@ -205,6 +209,7 @@
   flex: 1;
   display: flex;
   cursor: pointer;
+  min-height: 90px;
   padding-right: 4%;
 }
 

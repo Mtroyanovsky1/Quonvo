@@ -4,8 +4,9 @@ import io from 'socket.io-client';
 
 import { sendMessage, receiveMessage, newChattingPartner, questionReady, endChatThunk, endChat, minimizeChat, notifyMessage, questionThunk } from 'actions/chatActions';
 import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages, getVisibleChatIndex, isQMine, getQuestion } from 'reducers';
-import { Chat, Modal, PostChat } from '../presentationalComponents';
-
+import Chat from '../presentationalComponents/Chat';
+import Modal from '../presentationalComponents/Modal';
+import PostChat from '../presentationalComponents/PostChat';
 
 class ChatWrapper extends Component {
   constructor(props) {

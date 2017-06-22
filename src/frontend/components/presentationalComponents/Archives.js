@@ -1,21 +1,21 @@
 import React from 'react';
+import ReactLoading from 'react-loading';
 import ArchivedQuestion from './ArchivedQuestion';
 import ArchivedConversation from '../presentationalComponents/ArchivedConversation';
 
-const numberPerPage = 5;
+const numberPerPage = 10;
 
 const Archives = ({
   archives,
-  nextPage,
   newTopic,
   closeArchives,
   openMessages,
   areMessagesOpen,
   messages,
   backToArchives,
-  previousPage,
   currentTopic,
-  topics
+  topics,
+  loading
 }) => (
   <div className="archive_fulldisplay" id="fadeAndScale">
     <div className="archive_question_header">
@@ -44,30 +44,46 @@ const Archives = ({
       })
     }
     </div>
-    <div className="archives_display">
+    <div
+      className="archives_display"
+      style={{ overflow: 'auto' }}
+    >
       {areMessagesOpen
       ?
         <ArchivedConversation messages={messages} backToArchives={() => backToArchives()} />
       :
-        archives.map(archive =>
-          <ArchivedQuestion
-            archive={archive}
-            key={archive.id}
-            onClick={() => openMessages(archive.messages)}
+      loading
+        ?
+          <ReactLoading
+            className="loader"
+            type="spin"
+            delay={500}
+            color="lightblue"
+            height="150px"
+            width="150px"
           />
-        )
+        :
+          archives.map(archive =>
+            <ArchivedQuestion
+              archive={archive}
+              key={archive.id}
+              onClick={() => openMessages(archive.messages)}
+            />
+          )
       }
     </div>
-    {areMessagesOpen ? <div /> :
-    <div className="navigation_buttons">
-      <div className="previous_archives" onClick={() => previousPage(numberPerPage)}>
-        <img className="arrow_icon" alt="" src="assets/left-arrow.svg" />
-      </div>
-      <div className="next_archives" onClick={() => nextPage(numberPerPage)}>
-        <img className="arrow_icon" alt="" src="assets/left-arrow.svg" />
-      </div>
-    </div>
-  }
+    {
+  //   {areMessagesOpen ? <div /> :
+  //   <div className="navigation_buttons">
+  //     <div className="previous_archives" onClick={() => previousPage(numberPerPage)}>
+  //       <img className="arrow_icon" alt="" src="assets/left-arrow.svg" />
+  //     </div>
+  //     <div className="next_archives" onClick={() => nextPage(numberPerPage)}>
+  //       <img className="arrow_icon" alt="" src="assets/left-arrow.svg" />
+  //     </div>
+  //   </div>
+  // }
+}
   </div>
 
 );

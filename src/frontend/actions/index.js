@@ -159,12 +159,30 @@ const newArchives = archives => ({
   archives,
 });
 
+export const nextPage = () => ({
+  type: 'NEXT_PAGE'
+});
+
+export const previousPage = () => ({
+  type: 'PREVIOUS_PAGE'
+});
+
+export const pageZero = () => ({
+  type: 'PAGE_ZERO'
+});
+
+export const loading = () => ({
+  type: 'IS_LOADING'
+});
+
+export const doneLoading = () => ({
+  type: 'DONE_LOADING'
+});
 export const newArchivesThunk = (subject, pageNumber, limit) => (dispatch) => {
-  console.log('i got here three');
-  console.log(subject, pageNumber, limit);
+  dispatch(loading());
   apiGetArchives(subject, pageNumber, limit)
   .then((respJson) => {
-    console.log(respJson);
+    dispatch(doneLoading());
     dispatch(newArchives(respJson.archives));
     return respJson;
   })

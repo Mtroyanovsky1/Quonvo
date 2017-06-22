@@ -46,11 +46,34 @@ const newArchives = (state = [], action) => {
       return state;
   }
 };
+const loading = (state = false, action) => {
+  switch (action.type) {
+    case 'IS_LOADING':
+      return true;
+    case 'DONE_LOADING':
+      return false;
+    default:
+      return state;
+  }
+};
 
 const newRankings = (state = [], action) => {
   switch (action.type) {
     case 'NEW_RANKINGS':
       return action.rankings;
+    default:
+      return state;
+  }
+};
+
+const pageNumber = (state = 0, action) => {
+  switch (action.type) {
+    case 'NEXT_PAGE':
+      return state + 1;
+    case 'PREVIOUS_PAGE':
+      return state - 1;
+    case 'PAGE_ZERO':
+      return 0;
     default:
       return state;
   }
@@ -92,7 +115,9 @@ export default combineReducers({
   UIState,
   newRankings,
   topics,
-  newUser
+  newUser,
+  pageNumber,
+  loading
 });
 
 // selectors
@@ -102,6 +127,7 @@ export const getYourQuestionReady = state => state.yourQuestion.ready;
 export const getCurrentQuestionPage = state => state.currentQuestionPage;
 export const getUser = state => state.newUser;
 export const getChats = state => state.chats;
+export const getLoading = state => state.loading;
 export const getChat = (state, index) => chatsSels.getChat(state.chats, index);
 export const getMessages = (state, index) => chatsSels.getMessages(state.chats, index);
 export const getChattingPartner = (state, idx) => chatsSels.getChattingPartner(state.chats, idx);
@@ -114,6 +140,7 @@ export const areArchivesOpen = state => state.UIState === ARCHIVES;
 export const areRankingsOpen = state => state.UIState === RANKINGS;
 export const getRankings = state => state.newRankings;
 export const getUIstate = state => state.UIState;
+export const getPageNumber = state => state.pageNumber;
 export const getVisibleChatIndex = (state) => {
   const [type, index] = getUIstate(state).split('-');
   return type === 'chat' ? index : null;
