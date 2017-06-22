@@ -6,7 +6,7 @@ const defaultHandle = 'Anonymous';
 // when submit is clicked depending on the situation. Thus, we are writing
 // it as a purely presentational component, and whatever renders it will be
 // responsible for passing the onClick function in as a property
-const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics, firstName }) => {
+const WriteQuestion = ({ onSubmit, afterSubmit, topics, firstName }) => {
   let contentField;
   let genre = topics[0];
   let name;
@@ -24,7 +24,7 @@ const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics, firstName }) => 
         const handle = handleField.value || defaultHandle;
 
         if (content) {
-          onSubmitQuestion(genre, content, handle);
+          onSubmit(genre, content, handle);
           if (afterSubmit) afterSubmit();
         }
       }}

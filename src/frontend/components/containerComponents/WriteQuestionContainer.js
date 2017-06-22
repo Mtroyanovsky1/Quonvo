@@ -1,7 +1,33 @@
 import { connect } from 'react-redux';
+import React, { Component } from 'react';
+import io from 'socket.io-client';
 import { getTopics, getUser } from 'reducers';
 import { newQuestionThunk } from 'actions';
 import WriteQuestion from '../presentationalComponents/WriteQuestion';
+
+class WriteQuestionWrapper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { socket: io(DOMAIN) };
+    console.log('hey', this.props.onSubmitQuestion)
+  }
+
+  onSubmit(genre, content, handle) {
+    const submit = this.props.onSubmitQuestion;
+    console.log(submit)
+    submit(genre, content, handle)
+  }
+
+  render() {
+    const onSubmit = (genre, content, handle) => {
+      this.props.onSubmitQuestion(genre, content, handle);
+    };
+    this.newProps = Object.assign({}, this.props, { onSubmit })
+    return (
+      <WriteQuestion {...this.newProps} />
+    );
+  }
+}
 
 const mapStateToProps = (state, ownProps) => ({
   topics: getTopics(state),
@@ -9,4 +35,6 @@ const mapStateToProps = (state, ownProps) => ({
   ...ownProps
 });
 
-export default connect(mapStateToProps, { onSubmitQuestion: newQuestionThunk })(WriteQuestion);
+export default connect(mapStateToProps, {
+  onSubmitQuestion: newQuestionThunk
+})(WriteQuestionWrapper);

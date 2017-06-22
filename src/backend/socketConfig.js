@@ -97,6 +97,8 @@ const socketHandler = (io, sessionStore) => (connection) => {
       socket.join('MainRoom'); // The main room that all current users join
     });
 
+    socket.on('newQuestion', ({ question }) => { console.log('YOOOOO', question)})
+
     // TODO you can emit to the MainRoom to tell all users when there's a new question
 
     // Respond to connector that all sockets have been set up
