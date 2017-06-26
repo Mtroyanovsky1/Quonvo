@@ -21,26 +21,25 @@ const Archives = ({
     <div className="archive_question_header">
       <span className="bold_caslon">Archives </span>
       <div onClick={() => closeArchives()} className="right_arrow">
-        <img alt="" src="assets/arrow-01.png" className="icon" />
+        <img alt="" src="assets/arrow-01.png" className="icon_archives" />
       </div>
     </div>
     <div className="navigation_bar">
       {topics.map((topic) => {
         if (currentTopic === topic) {
-          return (<span
-            style={{ opacity: 0.5, fontSize: '1.6vw' }}
-            className="nav"
+          return (<div
+            className="col-md-3 col-sm-6 col-xs-12  nav"
             onClick={() => newTopic(topic, numberPerPage)}
           >
             { topic }
-          </span>);
+          </div>);
         }
-        return (<span
-          className="nav"
+        return (<div
+          className="col-md-3 col-sm-6 col-xs-12  nav"
           onClick={() => newTopic(topic, numberPerPage)}
         >
           { topic }
-        </span>);
+        </div>);
       })
     }
     </div>

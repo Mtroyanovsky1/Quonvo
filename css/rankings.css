@@ -62,16 +62,16 @@
 .rankings_subjects{
   width: 100%;
   flex: 0.1;
-  display: flex;
+  /*display: flex;*/
   padding: 25px;
   border-bottom: solid 1px #e8e8e8;
-  align-items: center;
-  justify-content: center;
+  /*align-items: center;
+  justify-content: center;*/
 }
 
 .ranking_topic{
   cursor: pointer;
-  flex: 1;
+  /*flex: 1;*/
   font-weight: bold;
   font-family: Roboto;
   font-size: 14px;
