@@ -216,7 +216,9 @@ textarea{
 /*THIS IS NOW CHAT FOR FULLSCREEN*/
 /*THIS IS NOW CHAT FOR FULLSCREEN*/
 
-
+.chat_question{
+  padding: 20px;
+}
 .chat_question_text{
     font-family : Roboto;
     font-size : 17px;
@@ -319,8 +321,7 @@ max-height: 50%;
     background: lightblue;
     padding: 10px;
     border-radius: 5px;
-    margin: 20px;
-    margin-top: 100px;
+    font-weight: bold;
   }
 
 .send_message{

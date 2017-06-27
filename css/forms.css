@@ -89,7 +89,23 @@ textarea {
   -webkit-border-radius : 9px;
   /*width: 28vw;*/
   /*height: 5vh;*/
-  height: 5vh;
+  height: 40px;
+  padding-left: 1em;
+  border:none;
+  font-size: 15px;
+}
+
+.searchbar_handle
+{
+  background : #E0E0E0;
+  background : rgba(224, 224, 224, 1);
+  border-radius : 9px;
+  -moz-border-radius : 9px;
+  -webkit-border-radius : 9px;
+  /*width: 28vw;*/
+  /*height: 5vh;*/
+  height: 40px;
+  width: 100%;
   padding-left: 1em;
   border:none;
   font-size: 15px;

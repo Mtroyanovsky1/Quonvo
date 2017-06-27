@@ -14,7 +14,7 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings, currentTopic 
         {topics.map((topic) => {
           if (currentTopic === topic) {
             return (<div
-              style={{ opacity: 0.5 }}
+              style={{ }}
               className="col-md-3 col-sm-6 col-xs-12 ranking_topic"
               onClick={() => setTopic(topic)}
             >

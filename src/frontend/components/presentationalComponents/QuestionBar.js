@@ -52,9 +52,6 @@ const QuestionBar = ({
       </div>
     </div>
     <ButtonGroup className="navigate_buttons">
-      <Button className="navigate_button" onClick={() => previousQuestionClick()} bsSize="large">
-      Previous
-      </Button>
       <Button className="navigate_button" onClick={() => nextQuestionClick()} bsSize="large">
       Next
       </Button>

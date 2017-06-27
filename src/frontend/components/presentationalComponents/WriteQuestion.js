@@ -41,7 +41,7 @@ const WriteQuestion = ({ onSubmitQuestion, afterSubmit, topics, firstName }) => 
         <select
           // maxLength="8"
           // type="text"
-          className="searchbar"
+          className="searchbar_handle"
           defaultValue={defaultHandle}
           onChange={(w) => { handleField = w.target.value; }}
         >
