@@ -30,7 +30,7 @@ const Archives = ({
           return (<div
             className="col-md-3 col-sm-6 col-xs-12  nav"
             onClick={() => newTopic(topic, numberPerPage)}
-            style={{opacity: 0.5 }}
+            style={{ opacity: 0.5 }}
           >
             { topic }
           </div>);
