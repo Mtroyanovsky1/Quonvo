@@ -10,23 +10,23 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings, currentTopic 
           <img alt="" src="assets/arrow-01.png" className="icon_ranking_arrow" />
         </div>
       </div>
-      <div className="rankings_subjects">
+      <div className="row rankings_subjects">
         {topics.map((topic) => {
           if (currentTopic === topic) {
-            return (<span
-              style={{ opacity: 0.5 }}
-              className="ranking_topic"
+            return (<div
+              style={{ }}
+              className="col-md-3 col-sm-6 col-xs-12 ranking_topic"
               onClick={() => setTopic(topic)}
             >
               { topic }
-            </span>);
+            </div>);
           }
-          return (<span
-            className="ranking_topic"
+          return (<div
+            className="col-md-3 col-sm-6 col-xs-12 ranking_topic"
             onClick={() => setTopic(topic)}
           >
             { topic }
-          </span>);
+          </div>);
         })
       }
       </div>

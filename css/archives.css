@@ -1,15 +1,23 @@
 .bold_caslon{
-  font-family: Caslon Old Face Heavy BT;
+  font-family: Roboto;
   font-weight : bold;
   /*font-size: 1.5vw;*/
-  font-size: 5vw;
+  font-size: 45px;
   /*line-height: 2.7vw;*/
   /*line-height: 50px;*/
   letter-spacing : 0.05vw;
   color : #231F20;
   color : rgb(35, 31, 32);
+  flex: 7;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
 }
 
+.icon_archives {
+  height: 30px;
+  width: 30px;
+}
 /*.bold
 {
   font-family : Roboto;
@@ -89,21 +97,26 @@
 .archive_question_header{
   flex: 0.5;
   color : black;
-  text-align: center;
+  text-align: left;
   padding-top: 3%;
   padding-bottom: 3vh;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
+  padding: 25px;
 }
 
 .right_arrow {
   -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
-    margin-left: 20%;
-    margin-right: 5%;
+    /*margin-left: 20%;
+    margin-right: 5%;*/
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .navigation_buttons {
@@ -149,25 +162,62 @@
   opacity: 0.5;
 }
 .navigation_bar{
-  flex: 0.7;
-  display: flex;
-  width: 90%;
-  margin-bottom: 1em;
-  border-bottom: solid 1px #e8e8e8;
-  justify-content: space-around;
+  /*flex: 0.5;
+  display: flex;*/
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 25px;
+  /*border-bottom: solid 1px #e8e8e8;*/
+  justify-content: center;
   align-items: center;
 }
 
 .nav{
-  flex: 1;
+  /*flex: 1;*/
+  display: flex;
   cursor: pointer;
-  padding: 5%;
   font-weight: bold;
   font-family: Roboto;
-  font-size: 17px;
+  font-size: 14px;
   letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
 
 }
+
+@media (max-width: 992px) {
+  .nav{
+    /*flex: 1;*/
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    /*border: 1px solid lightblue;*/
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+  }
+
+}
+@media (max-width: 992px) {
+  .question_box {
+    /*border-bottom: 1px solid lightblue;*/
+    border-top: 2px solid lightblue;
+    width: 100%;
+    /*flex: 1;*/
+    display: flex;
+    cursor: pointer;
+    min-height: 65px;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 
 .back_to_archives {
 
@@ -183,19 +233,19 @@
 }
 .nav:hover {
   opacity: 0.5;
-  font-size: 18px;
+  /*font-size: 18px;*/
 }
 
 .archives_display{
   width: 100%;
-  flex: 5;
+  flex: 6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
   overflow:scroll;
   overflow-y: scroll;
-  padding-top: 1em;
+  /*padding-top: 1em;*/
 }
 
 .right {
@@ -204,13 +254,46 @@
 }
 
 .question_box {
-  border-bottom: 1px solid #e8e8e8;
+  /*border-bottom: 1px solid lightblue;*/
+  border-top: 2px solid lightblue;
   width: 100%;
-  flex: 1;
+  /*flex: 1;*/
   display: flex;
   cursor: pointer;
-  min-height: 90px;
-  padding-right: 4%;
+  height: 50px;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .question_box {
+    /*border-bottom: 1px solid lightblue;*/
+    border-top: 2px solid lightblue;
+    width: 100%;
+    /*flex: 1;*/
+    display: flex;
+    cursor: pointer;
+    min-height: 75px;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .question_box {
+    /*border-bottom: 1px solid lightblue;*/
+    border-top: 2px solid lightblue;
+    width: 100%;
+    /*flex: 1;*/
+    display: flex;
+    cursor: pointer;
+    min-height: 100px;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .question_box:hover {
@@ -222,9 +305,16 @@
   font-size : 2vh;
   font-weight : bold;
   color : black;
-  flex: 2;
+  flex: 1;
   letter-spacing : 0.1vw;
-  padding: 1em;
-  padding-bottom: 2em;
-  width: 85%;
+  padding: 10px;
+  /*padding-bottom: 2em;*/
+  width: 90%;
+  /*white-space: nowrap;*/
+}
+
+.star_rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

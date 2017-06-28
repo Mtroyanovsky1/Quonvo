@@ -62,16 +62,16 @@
 .rankings_subjects{
   width: 100%;
   flex: 0.1;
-  display: flex;
+  /*display: flex;*/
   padding: 25px;
   border-bottom: solid 1px #e8e8e8;
-  align-items: center;
-  justify-content: center;
+  /*align-items: center;
+  justify-content: center;*/
 }
 
 .ranking_topic{
   cursor: pointer;
-  flex: 1;
+  /*flex: 1;*/
   font-weight: bold;
   font-family: Roboto;
   font-size: 14px;
@@ -79,8 +79,22 @@
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  .ranking_topic{
+    cursor: pointer;
+    /*flex: 1;*/
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px;
+  }
+
+}
+
 .ranking_topic:hover{
-  font-size: 15px;
+  /*font-size: 15px;*/
   opacity: 0.5;
 }
 
@@ -96,7 +110,8 @@
 
 .ranking{
   align-items: center;
-  height: 200px;
+  justify-content: center;
+  height: 100px;
   width: 100%;
   /*margin: 5px 0px 5px 0px;*/
   background-color: white;
@@ -120,7 +135,7 @@
   letter-spacing: 1px;
   font-family: Roboto;
   font-weight : bold;
-  font-size: 20px;
+  font-size: 2vh;
 }
 
 @-webkit-keyframes slideIn {

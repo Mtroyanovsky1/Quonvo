@@ -9,7 +9,6 @@ const QuestionBar = ({
    yourQuestionClick,
    yourQuestionReady,
    nextQuestionClick,
-   previousQuestionClick,
    onMouseHover,
    onMouseLeave
 }) => (
@@ -27,7 +26,7 @@ const QuestionBar = ({
         <LiveQuestion
           onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
           questionClickable={yourQuestionReady}
-          questionShade={yourQuestionReady ? 'red' : null}
+          questionShade={yourQuestionReady ? 'lightblue' : null}
           questionText={yourQuestion.content}
           questionSubject={yourQuestion.subject}
           questionHandle={yourQuestion.handle}
@@ -52,9 +51,6 @@ const QuestionBar = ({
       </div>
     </div>
     <ButtonGroup className="navigate_buttons">
-      <Button className="navigate_button" onClick={() => previousQuestionClick()} bsSize="large">
-      Previous
-      </Button>
       <Button className="navigate_button" onClick={() => nextQuestionClick()} bsSize="large">
       Next
       </Button>
