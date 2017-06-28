@@ -4,6 +4,8 @@ const questionsReducer = (state = [], action) => {
     //   return state.concat(action.question);
     case 'LOAD_QUESTIONS':
       return [...state, ...action.questions];
+    case 'REMOVE_QUESTION':
+      return state.filter(question => question.id !== action.questionId);
     default:
       return state;
   }

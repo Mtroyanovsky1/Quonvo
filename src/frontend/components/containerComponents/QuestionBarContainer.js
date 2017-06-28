@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import io from 'socket.io-client';
 import { connect } from 'react-redux';
-import { onQuestionClick, openChat } from 'actions/chatActions';
+import { onQuestionClick, openChat, removeQuestion } from 'actions/chatActions';
 import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
-
 
 const limit = 1000;
 const questionRefresh = 1000000; // TODO make a realistic value
@@ -16,11 +16,16 @@ class QuestionBarWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      socket: io(DOMAIN),
       answerModalActive: false,
       clickedQid: null,
       clickedQhandle: null,
       clickedQquestion: null
     };
+
+    this.state.socket.on('removeQuestion', ({ questionId }) => {
+      this.props.removeQuestion(questionId);
+    });
   }
 
   componentDidMount() {
@@ -170,6 +175,7 @@ export default connect(
     loadMoreQuestions,
     previousQuestionPage,
     firstQuestionPage,
-    yourQuestionClick: openChat
+    yourQuestionClick: openChat,
+    removeQuestion
   }
 )(QuestionBarWrapper);

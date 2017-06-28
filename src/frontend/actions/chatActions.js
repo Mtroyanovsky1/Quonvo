@@ -1,10 +1,12 @@
 // import { sendMessage as apiSendMessage } from 'api';
+import io from 'socket.io-client';
 import {
    updateQuestion as apiUpdateQuestion,
    endChat as apiEndChat,
    getQuestion as apiGetQuestion
    } from 'api';
 // actions affecting an individual chat
+const socket = io(DOMAIN);
 
 let nextid = 0; // TODO make a thunk that hits API and uses id from response
                 // or make it take an id and let whoever calls it do the saving
@@ -31,6 +33,7 @@ export const setHandle = (handle, chatIndex) => ({ type: 'SET_HANDLE', handle, c
 export const setQuestion = (question, chatindex) => ({ type: 'SET_QUESTION', question, chatindex });
 export const questionReady = () => ({ type: 'ANSWERER_FOUND' });
 export const clearYourQuestion = () => ({ type: 'CLEAR_YOUR_QUESTION' });
+export const removeQuestion = questionId => ({ type: 'REMOVE_QUESTION', questionId });
 
 export const questionThunk = questionId => (dispatch) => {
   apiGetQuestion(questionId)
@@ -53,11 +56,14 @@ export const endChatThunk = (
 
 export const onQuestionClick = (questionId, theirHandle, yourHandle, questionContent) =>
 (dispatch) => {
+  dispatch(removeQuestion(questionId));
   dispatch(joinRoom(questionId, questionId));
   dispatch(setQuestion(questionContent, questionId));
   dispatch(setHandle(yourHandle, questionId));
   dispatch(newChattingPartner(theirHandle, questionId));
   dispatch(openChat(questionId));
+
+  socket.emit('questionClicked', { questionId });
   apiUpdateQuestion(questionId);
 };
 
