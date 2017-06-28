@@ -9,7 +9,6 @@ const QuestionBar = ({
    yourQuestionClick,
    yourQuestionReady,
    nextQuestionClick,
-   previousQuestionClick,
    onMouseHover,
    onMouseLeave
 }) => (
@@ -27,7 +26,7 @@ const QuestionBar = ({
         <LiveQuestion
           onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
           questionClickable={yourQuestionReady}
-          questionShade={yourQuestionReady ? 'red' : null}
+          questionShade={yourQuestionReady ? 'lightblue' : null}
           questionText={yourQuestion.content}
           questionSubject={yourQuestion.subject}
           questionHandle={yourQuestion.handle}
