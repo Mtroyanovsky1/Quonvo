@@ -1,4 +1,4 @@
-import io from 'socket.io-client';
+
 import {
    signIn as apiSignIn,
    signUp as apiSignUp,
@@ -10,6 +10,7 @@ import {
    getUser as apiGetUser
    } from 'api';
 import { onQuestionCreate } from './chatActions';
+
 
 // thunk
 export const signIn = (email, password) => (/* dispatch */) => {
@@ -220,14 +221,10 @@ export const newMessageThunk = (chatId, content, user) => (dispatch) => {
   });
 };
 
-const socket = io(DOMAIN);
 
 export const newQuestionThunk = (subject, content, handle) => (dispatch) => {
   apiCreateQuestion(subject, content, handle)
   .then((responseJson) => {
-    const question = responseJson.newQuestion
-    console.log(question)
-    socket.emit('newQuestion', { question })
        /*
   {
     newQuestion: {
@@ -248,7 +245,6 @@ export const newQuestionThunk = (subject, content, handle) => (dispatch) => {
     const id = responseJson.newQuestion._id;
     dispatch(newQuestion(subject, content, id, handle));
     dispatch(onQuestionCreate(id, handle));
-    return responseJson.newQuestion
   })
   .catch((err) => {
     // console.log('error');
