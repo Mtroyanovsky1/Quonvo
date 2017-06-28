@@ -9,20 +9,18 @@ class WriteQuestionWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = { socket: io(DOMAIN) };
-    console.log('hey', this.props.onSubmitQuestion)
   }
 
   onSubmit(genre, content, handle) {
     const submit = this.props.onSubmitQuestion;
-    console.log(submit)
-    submit(genre, content, handle)
+    submit(genre, content, handle);
   }
 
   render() {
     const onSubmit = (genre, content, handle) => {
       this.props.onSubmitQuestion(genre, content, handle);
     };
-    this.newProps = Object.assign({}, this.props, { onSubmit })
+    this.newProps = Object.assign({}, this.props, { onSubmit });
     return (
       <WriteQuestion {...this.newProps} />
     );
