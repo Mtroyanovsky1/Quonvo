@@ -1,3 +1,4 @@
+
 import {
    signIn as apiSignIn,
    signUp as apiSignUp,
@@ -9,6 +10,7 @@ import {
    getUser as apiGetUser
    } from 'api';
 import { onQuestionCreate } from './chatActions';
+
 
 // thunk
 export const signIn = (email, password) => (/* dispatch */) => {
@@ -219,10 +221,11 @@ export const newMessageThunk = (chatId, content, user) => (dispatch) => {
   });
 };
 
+
 export const newQuestionThunk = (subject, content, handle) => (dispatch) => {
   apiCreateQuestion(subject, content, handle)
   .then((responseJson) => {
-    /*
+       /*
   {
     newQuestion: {
       __v: 0
