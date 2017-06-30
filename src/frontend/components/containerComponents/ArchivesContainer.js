@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { getArchives, getTopics, getPageNumber, getLoading } from 'reducers';
 import { newArchivesThunk, closeArchives, nextPage, pageZero, previousPage } from 'actions';
 import Archives from '../presentationalComponents/Archives';
-
+console.log('connect', Archives);
 class ArchivesWrapper extends Component {
   constructor(props) {
     super(props);
