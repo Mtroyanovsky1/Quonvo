@@ -6,6 +6,10 @@ const questionsReducer = (state = [], action) => {
       return [...state, ...action.questions];
     case 'REMOVE_QUESTION':
       return state.filter(question => question.id !== action.questionId);
+    case 'ADD_QUESTION': {
+      const arr = [action.question];
+      return state.concat(arr);
+    }
     default:
       return state;
   }

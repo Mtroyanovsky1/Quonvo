@@ -3,12 +3,12 @@ import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat, removeQuestion } from 'actions/chatActions';
 import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady } from 'reducers';
-import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage } from 'actions';
+import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage, addQuestion } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
 
 const limit = 1000;
-const questionRefresh = 1000000; // TODO make a realistic value
+const questionRefresh = 10000; // TODO make a realistic value
 const numberOfQs = 5;
 const howEarlyShouldWeLoad = -1; // TODO make a realistic value (see git issue #187)
 
@@ -22,9 +22,11 @@ class QuestionBarWrapper extends Component {
       clickedQhandle: null,
       clickedQquestion: null
     };
-
     this.state.socket.on('removeQuestion', ({ questionId }) => {
       this.props.removeQuestion(questionId);
+    });
+    this.state.socket.on('addQuestion', (newQuestion) => {
+      this.props.addQuestion(newQuestion.newQuestion);
     });
   }
 
@@ -108,7 +110,7 @@ class QuestionBarWrapper extends Component {
       {},
       this.props,
       {
-        onQuestionClick: (id, theirHandle, theirQuestion) =>
+        onClick: (id, theirHandle, theirQuestion) =>
           this.openModal(id, theirHandle, theirQuestion),
         nextQuestionClick: () => this.nextQuestion(),
         previousQuestionClick: () => this.previousQuestion(),
@@ -176,6 +178,7 @@ export default connect(
     previousQuestionPage,
     firstQuestionPage,
     yourQuestionClick: openChat,
-    removeQuestion
+    removeQuestion,
+    addQuestion
   }
 )(QuestionBarWrapper);

@@ -30,7 +30,7 @@ export const endChat = chatIndex => ({ type: 'END_CHAT', chatIndex });
 export const newChattingPartner = (partner, chatIndex) => ({ type: 'NEW_PARTNER', partner, chatIndex });
 export const joinRoom = (room, chatIndex) => ({ type: 'JOIN_ROOM', room, chatIndex });
 export const setHandle = (handle, chatIndex) => ({ type: 'SET_HANDLE', handle, chatIndex });
-export const setQuestion = (question, chatindex) => ({ type: 'SET_QUESTION', question, chatindex });
+export const setQuestion = (question, chatIndex) => ({ type: 'SET_QUESTION', question, chatIndex });
 export const questionReady = () => ({ type: 'ANSWERER_FOUND' });
 export const clearYourQuestion = () => ({ type: 'CLEAR_YOUR_QUESTION' });
 export const removeQuestion = questionId => ({ type: 'REMOVE_QUESTION', questionId });
@@ -56,6 +56,7 @@ export const endChatThunk = (
 
 export const onQuestionClick = (questionId, theirHandle, yourHandle, questionContent) =>
 (dispatch) => {
+  console.log('in action', questionContent)
   dispatch(removeQuestion(questionId));
   dispatch(joinRoom(questionId, questionId));
   dispatch(setQuestion(questionContent, questionId));

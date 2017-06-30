@@ -1,4 +1,4 @@
-
+import io from 'socket.io-client';
 import {
    signIn as apiSignIn,
    signUp as apiSignUp,
@@ -11,6 +11,7 @@ import {
    } from 'api';
 import { onQuestionCreate } from './chatActions';
 
+const socket = io(DOMAIN);
 
 // thunk
 export const signIn = (email, password) => (/* dispatch */) => {
@@ -104,6 +105,11 @@ export const previousQuestionPage = () => ({
 
 export const firstQuestionPage = () => ({
   type: 'FIRST_QUESTION_PAGE'
+});
+
+export const addQuestion = question => ({
+  type: 'ADD_QUESTION',
+  question
 });
 
 const newQuestion = (subject, content, id, handle) => ({
@@ -225,23 +231,7 @@ export const newMessageThunk = (chatId, content, user) => (dispatch) => {
 export const newQuestionThunk = (subject, content, handle) => (dispatch) => {
   apiCreateQuestion(subject, content, handle)
   .then((responseJson) => {
-       /*
-  {
-    newQuestion: {
-      __v: 0
-      _id: "58f94e261463e010512bd16e"
-      asker: "58da98a8db5a941c5f02ca43"
-      content: "make?"
-      createdTime: "2017-04-21T00:11:18.564Z"
-      handle: "me"
-      live: true
-      subject: "Academics"
-      __proto__: Object
-    }
-    success: true
-  }
-    */
-    // console.log('new Q response', responseJson);
+    socket.emit('newQuestion', { newQuestion: responseJson.newQuestion });
     const id = responseJson.newQuestion._id;
     dispatch(newQuestion(subject, content, id, handle));
     dispatch(onQuestionCreate(id, handle));
