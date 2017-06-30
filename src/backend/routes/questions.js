@@ -78,6 +78,29 @@ router.post('/questions/find', (req, res) => {
 // could also factor into the hotness function.
 
 
+// router.get('/questions/five', (req, res) => {
+//   const userId = req.user.id;
+//   User.findById(userId)
+//   .then((user) => {
+//     // The map function below creates an array that can be passed into the $or logic
+//     // in order to return all questions that match any of the users interests
+//     const interests = user.interests;
+//     let subjects;
+//     if (interests.length === 0) {
+//       subjects = allSubjects.map((subject) => {
+//         const obj = {};
+//         obj.subject = subject;
+//         return obj;
+//       });
+//     } else {
+//       subjects = interests.map((subject) => {
+//         const obj = {};
+//         obj.subject = subject;
+//         return obj;
+//       });
+//     }
+// })
+
 router.get('/questions/hot', (req, res) => {
   const userId = req.user.id;
   const questionLimit = parseInt(req.query.limit);

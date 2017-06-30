@@ -101,6 +101,9 @@ const socketHandler = (io, sessionStore) => (connection) => {
       socket.broadcast.emit('removeQuestion', { questionId });
     });
 
+    socket.on('newQuestion', (newQuestion) => {
+      socket.broadcast.emit('addQuestion', { newQuestion: newQuestion.newQuestion });
+    });
     // TODO you can emit to the MainRoom to tell all users when there's a new question
 
     // Respond to connector that all sockets have been set up

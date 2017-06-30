@@ -4,7 +4,7 @@ import LiveQuestion from './LiveQuestion';
 // The liftOfQustions is an array of objects that has the keys content, subject, and id
 const QuestionBar = ({
    listOfQuestions,
-   onQuestionClick,
+   onClick,
    yourQuestion,
    yourQuestionClick,
    yourQuestionReady,
@@ -18,7 +18,7 @@ const QuestionBar = ({
       className="question_header bold"
       style={{ letterSpacing: '0.1vw' }}
     >
-      LEND AN EAR
+      LETS START A QUONVO
     </div>
     { yourQuestion ?
       <div className="yourQuestion">
@@ -38,7 +38,13 @@ const QuestionBar = ({
         {listOfQuestions.map(question =>
           <LiveQuestion
             key={question.id}
-            onQuestionClick={() => onQuestionClick(question.id, question.handle, question.content)}
+            onQuestionClick={() => {
+              question.id
+              ?
+              onClick(question.id, question.handle, question.content)
+              :
+              onClick(question._id, question.handle, question.content);
+            }}
             onMouseOver={onMouseHover}
             onMouseOut={onMouseLeave}
             questionClickable={true}

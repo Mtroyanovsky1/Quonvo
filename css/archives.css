@@ -239,7 +239,6 @@
 .archives_display{
   width: 100%;
   flex: 6;
-  display: flex;
   flex-direction: column;
   align-items: center;
   /*justify-content: center;*/
