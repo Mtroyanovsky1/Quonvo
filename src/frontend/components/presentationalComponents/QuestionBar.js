@@ -16,7 +16,6 @@ const QuestionBar = ({
   <div className="question_bar">
     <div
       className="question_header bold"
-      style={{ letterSpacing: '0.1vw' }}
     >
       LETS START A QUONVO
     </div>
