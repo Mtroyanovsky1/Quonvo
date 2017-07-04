@@ -93,9 +93,6 @@ const socketHandler = (io, sessionStore) => (connection) => {
     // ========================================================
     // ======                MAIN SOCKETS                ======
     // ========================================================
-    socket.on('joinMain', () => {
-      socket.join('MainRoom'); // The main room that all current users join
-    });
 
     socket.on('questionClicked', ({ questionId }) => {
       socket.broadcast.emit('removeQuestion', { questionId });

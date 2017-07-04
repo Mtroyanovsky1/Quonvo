@@ -7,6 +7,7 @@ import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages
 import Chat from '../presentationalComponents/Chat';
 import Modal from '../presentationalComponents/Modal';
 import PostChat from '../presentationalComponents/PostChat';
+
 console.log('connect', PostChat);
 console.log('connect', Modal);
 console.log('connect', Chat);
