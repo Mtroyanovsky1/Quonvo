@@ -38,8 +38,10 @@ const Chat = ({
           />
         </div>
       </div>
+      <div className="chat_question_box">
       <div className="chat_question">
-        <span className="chatQuestion_text"> { question } </span>
+        <div className="chatQuestion_text"> { question } </div>
+      </div>
       </div>
       <MessagesBoxContainer chatIndex={chatIndex} />
       <div className="row row3">

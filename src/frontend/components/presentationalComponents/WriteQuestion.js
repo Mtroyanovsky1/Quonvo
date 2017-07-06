@@ -35,7 +35,7 @@ const WriteQuestion = ({ onSubmit, afterSubmit, topics, firstName }) => {
           className="question"
           ref={(node) => { contentField = node; }}
           placeholder="Enter text here ..."
-          maxLength="150"
+          maxLength="1000"
         />
         <h2 className="genre_bold">HANDLE</h2>
         <select
