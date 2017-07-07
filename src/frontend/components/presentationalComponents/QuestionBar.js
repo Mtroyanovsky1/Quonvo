@@ -19,19 +19,20 @@ const QuestionBar = ({
     >
       LETS START A QUONVO
     </div>
-    { yourQuestion ?
-      <div className="yourQuestion">
-        Your Question
-        <LiveQuestion
-          onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
-          questionClickable={yourQuestionReady}
-          questionShade={yourQuestionReady ? 'lightblue' : null}
-          questionText={yourQuestion.content}
-          questionSubject={yourQuestion.subject}
-          questionHandle={yourQuestion.handle}
-        />
-      </div>
-      : null }
+  {  // { yourQuestion ?
+    //   <div className="yourQuestion">
+    //     Your Question
+    //     <LiveQuestion
+    //       onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
+    //       questionClickable={yourQuestionReady}
+    //       questionShade={yourQuestionReady ? 'lightblue' : null}
+    //       questionText={yourQuestion.content}
+    //       questionSubject={yourQuestion.subject}
+    //       questionHandle={yourQuestion.handle}
+    //     />
+    //   </div>
+    //   : null }
+  }
     <div className="question_sidebar_display">
       <div className="question_column">
         {listOfQuestions.map(question =>
