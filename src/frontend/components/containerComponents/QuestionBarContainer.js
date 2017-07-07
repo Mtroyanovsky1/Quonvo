@@ -6,6 +6,7 @@ import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionR
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage, addQuestion } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
+
 console.log('connect', QuestionBar);
 const limit = 1000;
 const questionRefresh = 10000; // TODO make a realistic value
