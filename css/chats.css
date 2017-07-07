@@ -81,7 +81,7 @@ textarea{
 }
 
 .wrapper{
-  flex: 0.3;
+  flex: 0.4;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -100,7 +100,7 @@ textarea{
   flex: 4;
   color : black;
   text-align: left;
-  font-size: 18px;
+  font-size: 1.5vw;
   text-align: left;
   justify-content: center;
   max-width: 100%;
@@ -217,7 +217,17 @@ textarea{
 /*THIS IS NOW CHAT FOR FULLSCREEN*/
 
 .chat_question{
-  padding: 20px;
+  background-color: #FFFFFF;
+  max-height: 100px;
+  overflow-y:scroll;
+  padding: 10px;
+  border-radius: 5px;
+}
+.chat_question_box{
+  padding: 10px;
+  /*padding-bottom: 15px;*/
+  max-height: 150px;
+  background-color: #E6E7E8;
 }
 .chat_question_text{
     font-family : Roboto;
@@ -230,7 +240,7 @@ textarea{
     width: 100%;
     padding-left: 4.5%;
     line-height: 2.5ex;
-    height: 7.5ex; /* 2.5ex for each visible line */
+    height: 7.5ex;
     overflow: hidden;
 
 }
@@ -318,8 +328,7 @@ max-height: 50%;
     padding-right: 0 !important;
   }
   .chatQuestion_text{
-    background: lightblue;
-    padding: 10px;
+    max-height: 100px;
     border-radius: 5px;
     font-weight: bold;
   }

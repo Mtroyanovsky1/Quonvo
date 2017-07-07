@@ -6,25 +6,57 @@
 .menu_container{
   /*flex: 4;*/
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 10vw;
   padding-right: 3vw;
   max-height: 100vh;
+  align-items: space-around;
   /*flex: 0.5;*/
 
 }
 
 .menu_wrapper {
   align-self: right;
+  flex: 0.5;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  padding-right: 0px;
+}
+
+@media (max-width: 800px) {
+  .menu_wrapper {
+    align-self: right;
+    flex: 0.5;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    padding-right: 20px;
+  }
 }
 .menu_icon{
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 8vh;
+  padding-bottom: 6vh;
   padding-top: 4vh;
   cursor: pointer;
   /*margin-bottom: 13vh;*/
+}
+
+@media (max-height: 600px) {
+  .menu_icon{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    /*padding-bottom: 6vh;*/
+    padding-top: 4vh;
+    cursor: pointer;
+    /*margin-bottom: 13vh;*/
+  }
 }
 
 .menu_bold{
@@ -57,8 +89,8 @@ max-height:100px;
 .icon{
   /*max-width:70px;
   max-height:70px;*/
-  max-width: 5vw;
-  max-height: 5vw;
+  max-width: 50px;
+  max-height: 50px;
   cursor: pointer;
   -webkit-transition: all 1s ease; /* Safari and Chrome */
   -moz-transition: all 1s ease; /* Firefox */
@@ -70,8 +102,8 @@ max-height:100px;
 .icon_toobig{
   /*max-width:50px;
   max-height:50px;*/
-  max-width: 4vw;
-  max-height: 4vw;
+  max-width: 50px;
+  max-height: 50px;
   cursor: pointer;
 
 }

@@ -103,6 +103,8 @@
   overflow: scroll;
   display: flex;
   width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   /*padding: 0px 10px 0px 10px;*/
   flex-direction: column;
   background-color: lightgrey;
