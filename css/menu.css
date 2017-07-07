@@ -18,7 +18,7 @@
 
 .menu_wrapper {
   align-self: right;
-  flex: 0.5;
+  flex: 0.3;
   justify-content: flex-end;
   align-items: center;
   display: flex;

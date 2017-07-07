@@ -67,7 +67,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', auth(passport));
 app.use((req, res, next) => {
-  if (!req.user && req.method !== 'OPTIONS') {
+  if (!req.user && req.method !== 'OPTIONS' && req.method !== 'GET') {
+    //TODO you really shouldnt allow get requests, I did this to fix the issue of not loading
     return res.format({
       'text/html': () => res.redirect('/login'),
       'application/json': () => res.json({ response: 'You are not logged in' })

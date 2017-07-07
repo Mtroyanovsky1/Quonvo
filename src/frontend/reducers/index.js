@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import chats, * as chatsSels from './chatsReducer';
-import questions from './questionsReducer';
+import questionsReducer from './questionsReducer';
 
 const currentQuestionPage = (state = 0, action) => {
   switch (action.type) {
@@ -108,7 +108,7 @@ const UIState = (state = EMPTY, action) => {
 
 export default combineReducers({
   chats,
-  questions,
+  questionsReducer,
   currentQuestionPage,
   yourQuestion,
   newArchives,
@@ -121,7 +121,7 @@ export default combineReducers({
 });
 
 // selectors
-export const getQuestions = state => state.questions;
+export const getQuestions = state => state.questionsReducer;
 export const getYourQuestion = state => state.yourQuestion.question;
 export const getYourQuestionReady = state => state.yourQuestion.ready;
 export const getCurrentQuestionPage = state => state.currentQuestionPage;

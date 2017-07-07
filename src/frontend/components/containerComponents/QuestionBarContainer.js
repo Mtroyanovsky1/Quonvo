@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat, removeQuestion } from 'actions/chatActions';
-import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady } from 'reducers';
+import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUser } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage, addQuestion } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
 
 console.log('connect', QuestionBar);
 const limit = 1000;
-const questionRefresh = 10000; // TODO make a realistic value
+const questionRefresh = 40000; // TODO make a realistic value
 const numberOfQs = 5;
 const howEarlyShouldWeLoad = -1; // TODO make a realistic value (see git issue #187)
 
@@ -27,7 +27,11 @@ class QuestionBarWrapper extends Component {
       this.props.removeQuestion(questionId);
     });
     this.state.socket.on('addQuestion', (newQuestion) => {
-      this.props.addQuestion(newQuestion.newQuestion);
+      this.props.addQuestion(newQuestion.newQuestion, this.props.user);
+    });
+    this.state.socket.on('removeYourQuestion', () => {
+      const yourQuestionId = this.props.yourQuestion.Id;
+      this.props.removeQuestion(yourQuestionId);
     });
   }
 
@@ -166,7 +170,8 @@ const mapStateToProps = (state) => {
     allQuestions,
     currentPage: page,
     yourQuestion: getYourQuestion(state),
-    yourQuestionReady: getYourQuestionReady(state)
+    yourQuestionReady: getYourQuestionReady(state),
+    user: getUser(state)
   };
 };
 

@@ -47,16 +47,21 @@ export const endChatThunk = (
   questionId,
   askerHandle,
   rating,
-  questionAnswered
+  questionAnswered,
+  wantAnotherAnswer
 ) => (dispatch) => {
   dispatch(endChat(questionId));
+  if(!wantAnotherAnswer) {
   dispatch(clearYourQuestion());
+}
+  if(wantAnotherAnswer) {
+
+  }
   apiEndChat(messages, questionId, askerHandle, rating, questionAnswered);
 };
 
 export const onQuestionClick = (questionId, theirHandle, yourHandle, questionContent) =>
 (dispatch) => {
-  console.log('in action', questionContent)
   dispatch(removeQuestion(questionId));
   dispatch(joinRoom(questionId, questionId));
   dispatch(setQuestion(questionContent, questionId));

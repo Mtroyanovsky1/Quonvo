@@ -80,6 +80,7 @@ const socketHandler = (io, sessionStore) => (connection) => {
     });
 
     socket.on('disconnect', () => {
+      socket.emit('removeYourQuestion');
       if (!socket.room) {
         socket.emit('endChatResponse', { success: false, reason: 'There\'s no chat to end.' });
         return;
@@ -96,6 +97,7 @@ const socketHandler = (io, sessionStore) => (connection) => {
 
     socket.on('questionClicked', ({ questionId }) => {
       socket.broadcast.emit('removeQuestion', { questionId });
+      console.log('io', io)
     });
 
     socket.on('newQuestion', (newQuestion) => {
