@@ -48,21 +48,24 @@ passport.use(new GoogleStrategy({
     models.User.findOne({ google: profile.id })
     .then((existingUser) => {
       if (existingUser) {
-        done(null, existingUser);
+        const user = existingUser;
+        user.name = profile.name.givenName;
+        user.save();
+        done(null, user);
       } else {
         models.User.findOne({ email: profile.emails[0].value.toLowerCase() })
       .then((existingEmailUser) => {
         if (existingEmailUser) {
           const user = existingEmailUser;
           user.google = profile.id;
-          user.name = profile.givenName;
+          user.name = profile.name.givenName;
           user.save();
           done(null, user);
         } else {
           const user = new User({
             email: profile.emails[0].value.toLowerCase(),
             google: profile.id,
-            name: profile.givenName
+            name: profile.name.givenName
           });
           user.save();
           done(null, user);

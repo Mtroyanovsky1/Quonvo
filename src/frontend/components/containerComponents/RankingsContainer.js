@@ -6,7 +6,6 @@ import { newRankingsThunk, closeRankings } from 'actions';
 
 import Rankings from '../presentationalComponents/Rankings';
 
-console.log('connect', Rankings);
 class RankingsWrapper extends Component {
   constructor(props) {
     super(props);

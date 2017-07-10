@@ -80,6 +80,7 @@
 .answer_button {
   background-color: lightblue;
   height: 40px;
+  margin-top: 15px;
 }
 .answer_name{
   font-family: Roboto;

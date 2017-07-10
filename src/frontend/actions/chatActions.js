@@ -5,6 +5,7 @@ import {
    endChat as apiEndChat,
    getQuestion as apiGetQuestion
    } from 'api';
+
 // actions affecting an individual chat
 const socket = io(DOMAIN);
 
@@ -51,12 +52,13 @@ export const endChatThunk = (
 ) => (dispatch) => {
   dispatch(endChat(questionId));
   dispatch(clearYourQuestion());
+
+
   apiEndChat(messages, questionId, askerHandle, rating, questionAnswered);
 };
 
 export const onQuestionClick = (questionId, theirHandle, yourHandle, questionContent) =>
 (dispatch) => {
-  console.log('in action', questionContent)
   dispatch(removeQuestion(questionId));
   dispatch(joinRoom(questionId, questionId));
   dispatch(setQuestion(questionContent, questionId));

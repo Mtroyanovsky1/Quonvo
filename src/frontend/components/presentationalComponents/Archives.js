@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading';
 import ArchivedQuestion from './ArchivedQuestion';
 import ArchivedConversation from '../presentationalComponents/ArchivedConversation';
 
-const numberPerPage = 10;
+const numberPerPage = 1000;
 
 const Archives = ({
   archives,

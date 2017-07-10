@@ -3,14 +3,11 @@ import { connect } from 'react-redux';
 import io from 'socket.io-client';
 
 import { sendMessage, receiveMessage, newChattingPartner, questionReady, endChatThunk, endChat, minimizeChat, notifyMessage, questionThunk } from 'actions/chatActions';
-import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages, getVisibleChatIndex, isQMine, getQuestion } from 'reducers';
+import { getChattingPartner, getRoom, getMyHandle, /* getChatOpen,*/ getMessages, getVisibleChatIndex, isQMine, getQuestion, getYourQuestion } from 'reducers';
 import Chat from '../presentationalComponents/Chat';
 import Modal from '../presentationalComponents/Modal';
 import PostChat from '../presentationalComponents/PostChat';
 
-console.log('connect', PostChat);
-console.log('connect', Modal);
-console.log('connect', Chat);
 class ChatWrapper extends Component {
   constructor(props) {
     super(props);
@@ -86,6 +83,11 @@ class ChatWrapper extends Component {
 
     // response is questionAnswered (Yes/No) from asker or 'OK' from answerer not submitting rating
     const onPress = (response, rating) => {
+      let wantAnotherAnswer = false;
+      if (response === 'Yes') {
+        wantAnotherAnswer = true;
+        this.state.socket.emit('newQuestion', { newQuestion: this.props.yourQuestion });
+      }
       if (response === 'Yes' || response === 'No') {
         this.closeModal();
         // endChatThunk changes state, AND hits db in a few ways
@@ -94,7 +96,9 @@ class ChatWrapper extends Component {
          this.props.room,
          this.props.yourHandle,
          rating,
-         response
+         response,
+         wantAnotherAnswer,
+         this.props.yourQuestion
        );
       } else {
         this.closeModal();
@@ -136,7 +140,8 @@ const mapStateToProps = (state, { chatIndex }) => ({
   chatOpen: getVisibleChatIndex(state) === chatIndex, // getChatOpen(state, chatIndex),
   messages: getMessages(state, chatIndex),
   iAmAsker: isQMine(state, chatIndex),
-  question: getQuestion(state, chatIndex)
+  question: getQuestion(state, chatIndex),
+  yourQuestion: getYourQuestion(state)
 });
 
 

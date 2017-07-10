@@ -41,6 +41,7 @@ export const signUp = (email, password, name, interests) => (/* dispatch */) => 
     } else {
       console.log('responseJson', resp);
       // success: true, user: mognoUserObject
+      apiSignIn(resp.user.email, resp.user.password);
       location.href = '/'; // this redirects you to '/'
     }
   })
@@ -107,9 +108,10 @@ export const firstQuestionPage = () => ({
   type: 'FIRST_QUESTION_PAGE'
 });
 
-export const addQuestion = question => ({
+export const addQuestion = (question, user) => ({
   type: 'ADD_QUESTION',
-  question
+  question,
+  user
 });
 
 const newQuestion = (subject, content, id, handle) => ({

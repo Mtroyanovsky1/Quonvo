@@ -6,7 +6,7 @@ import SideBar from '../presentationalComponents/SideBar';
 import Modal from '../presentationalComponents/Modal';
 import WriteQuestionContainer from '../containerComponents/WriteQuestionContainer';
 // TODO add UI actions for the minimizing and such
-console.log('connect', SideBar);
+
 const numberPerPage = 1000;
 
 class SideBarWrapper extends Component {
