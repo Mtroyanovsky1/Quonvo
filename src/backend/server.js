@@ -60,12 +60,13 @@ app.use(session({
   store: mongoStore
 }));
 
+app.use('/public', express.static('build/public'));
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', auth(passport));
 app.use((req, res, next) => {
-  if (!req.user && req.method !== 'OPTIONS' && req.method !== 'GET') {
-    //TODO you really shouldnt allow get requests, I did this to fix the issue of not loading
+  if (!req.user && req.method !== 'OPTIONS') {
     return res.format({
       'text/html': () => res.redirect('/login'),
       'application/json': () => res.json({ response: 'You are not logged in' })
@@ -75,7 +76,6 @@ app.use((req, res, next) => {
 });
 
 // all files in build/public are publically available through /public route
-app.use('/public', express.static('build/public'));
 
 
 app.use('/', questionRoutes);
