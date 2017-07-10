@@ -42,9 +42,6 @@ console.log('env', process.env.NODE_ENV);
 mongoose.Promise = global.Promise;
 mongoose.connect(connect);
 
-// all files in build/public are publically available through /public route
-app.use('/public', express.static('build/public'));
-
 // login (home/splash) page
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../../build/login.html'));
@@ -76,6 +73,10 @@ app.use((req, res, next) => {
   }
   return next();
 });
+
+// all files in build/public are publically available through /public route
+app.use('/public', express.static('build/public'));
+
 
 app.use('/', questionRoutes);
 app.use('/', activeChatRoutes);
