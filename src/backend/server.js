@@ -65,15 +65,6 @@ app.use('/public', express.static('build/public'));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', auth(passport));
-app.use((req, res, next) => {
-  if (!req.user && req.method !== 'OPTIONS') {
-    return res.format({
-      'text/html': () => res.redirect('/login'),
-      'application/json': () => res.json({ response: 'You are not logged in' })
-    });
-  }
-  return next();
-});
 
 // all files in build/public are publically available through /public route
 
@@ -92,9 +83,21 @@ app.get('/assets/:asset', (req, res) => {
 // In dev (3000) (after building webpack): postman tool (after login) (main page on /Temp)
 // In webpack dev server (8080) (this file isn't used): postman tool (main page on /Temp)
 // This route is a '*' for use by react-router
+
+app.use((req, res, next) => {
+  if (!req.user && req.method !== 'OPTIONS') {
+    return res.format({
+      'text/html': () => res.redirect('/login'),
+      'application/json': () => res.json({ response: 'You are not logged in' })
+    });
+  }
+  return next();
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../build/index.html'));
 });
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
