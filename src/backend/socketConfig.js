@@ -97,7 +97,6 @@ const socketHandler = (io, sessionStore) => (connection) => {
 
     socket.on('questionClicked', ({ questionId }) => {
       socket.broadcast.emit('removeQuestion', { questionId });
-      console.log('io', io)
     });
 
     socket.on('newQuestion', (newQuestion) => {

@@ -5,6 +5,7 @@ import {
    endChat as apiEndChat,
    getQuestion as apiGetQuestion
    } from 'api';
+
 // actions affecting an individual chat
 const socket = io(DOMAIN);
 
@@ -47,16 +48,12 @@ export const endChatThunk = (
   questionId,
   askerHandle,
   rating,
-  questionAnswered,
-  wantAnotherAnswer
+  questionAnswered
 ) => (dispatch) => {
   dispatch(endChat(questionId));
-  if(!wantAnotherAnswer) {
   dispatch(clearYourQuestion());
-}
-  if(wantAnotherAnswer) {
 
-  }
+
   apiEndChat(messages, questionId, askerHandle, rating, questionAnswered);
 };
 

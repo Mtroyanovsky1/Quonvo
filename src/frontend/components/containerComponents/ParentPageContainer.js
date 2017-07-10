@@ -5,7 +5,6 @@ import { getChats, areArchivesOpen, areRankingsOpen } from 'reducers';
 import io from 'socket.io-client';
 import ParentPage from '../presentationalComponents/ParentPage';
 
-console.log('connect', ParentPage);
 class ParentPageWrapper extends Component {
   constructor(props) {
     super(props);

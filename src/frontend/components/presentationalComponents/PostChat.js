@@ -31,10 +31,15 @@ const PostChat = ({ onPress, endedByMe, iAmAsker, chattingPartner }) => {
         half={true}
         size={25}
       />
-      <p className="rate_chat_text"> Do you want to get another answer? </p>
+      {
+        // <p className="rate_chat_text"> Do you want to get another answer? </p>
+      }
       <div className="buttons">
-        <Button className="rating_button" onClick={() => onPress('No', rating)} bsSize="large"> No </Button>
-        <Button className="rating_button" onClick={() => onPress('Yes', rating)} bsSize="large"> Yes </Button>
+        <Button className="rating_button" onClick={() => onPress('No', rating)} bsSize="large"> Done </Button>
+        {
+  // <Button className="rating_button"
+  // onClick={() => onPress('Yes', rating)} bsSize="large"> Yes </Button>
+        }
       </div>
     </div>
   );

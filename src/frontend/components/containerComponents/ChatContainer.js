@@ -8,9 +8,6 @@ import Chat from '../presentationalComponents/Chat';
 import Modal from '../presentationalComponents/Modal';
 import PostChat from '../presentationalComponents/PostChat';
 
-console.log('connect', PostChat);
-console.log('connect', Modal);
-console.log('connect', Chat);
 class ChatWrapper extends Component {
   constructor(props) {
     super(props);
@@ -100,7 +97,8 @@ class ChatWrapper extends Component {
          this.props.yourHandle,
          rating,
          response,
-         wantAnotherAnswer
+         wantAnotherAnswer,
+         this.props.yourQuestion
        );
       } else {
         this.closeModal();

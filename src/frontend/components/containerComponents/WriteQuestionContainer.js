@@ -5,7 +5,6 @@ import { getTopics, getUser } from 'reducers';
 import { newQuestionThunk } from 'actions';
 import WriteQuestion from '../presentationalComponents/WriteQuestion';
 
-console.log('connect', WriteQuestion);
 class WriteQuestionWrapper extends Component {
   constructor(props) {
     super(props);

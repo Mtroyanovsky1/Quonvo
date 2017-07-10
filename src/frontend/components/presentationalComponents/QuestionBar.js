@@ -17,22 +17,31 @@ const QuestionBar = ({
     <div
       className="question_header bold"
     >
-      LETS START A QUONVO
+      CLICK ON A QUESTION TO START A QUONVO
     </div>
-  {  // { yourQuestion ?
-    //   <div className="yourQuestion">
-    //     Your Question
-    //     <LiveQuestion
-    //       onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
-    //       questionClickable={yourQuestionReady}
-    //       questionShade={yourQuestionReady ? 'lightblue' : null}
-    //       questionText={yourQuestion.content}
-    //       questionSubject={yourQuestion.subject}
-    //       questionHandle={yourQuestion.handle}
-    //     />
-    //   </div>
-    //   : null }
-  }
+    {yourQuestion ?
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        {yourQuestionReady ?
+          <p style={{ textAlign: 'center', fontFamily: 'Roboto Slab', marginTop: '5px' }}> Someone is answering your question </p>
+          :
+          <p style={{ textAlign: 'center', fontFamily: 'Roboto Slab', marginTop: '5px' }}> Looking for someone to answer your question </p>
+      }
+        <LiveQuestion
+          onQuestionClick={() => yourQuestionClick(yourQuestion.id)}
+          questionClickable={yourQuestionReady}
+          questionShade={yourQuestionReady ? 'lightblue' : '#F5DEB3'}
+          questionText={yourQuestion.content}
+          questionSubject={yourQuestion.subject}
+          questionHandle={yourQuestion.handle}
+        />
+      </div>
+    : null}
     <div className="question_sidebar_display">
       <div className="question_column">
         {listOfQuestions.map(question =>

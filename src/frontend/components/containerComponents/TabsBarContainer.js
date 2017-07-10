@@ -4,5 +4,5 @@ import TabsBar from '../presentationalComponents/TabsBar';
 
 // right now, TabsBar gets the chats from ParentPage.
 // TODO should it get them from connect here instead?
-console.log('connect', TabsBar);
+
 export default connect(null, { openChat })(TabsBar);

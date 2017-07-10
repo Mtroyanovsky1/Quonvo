@@ -76,8 +76,7 @@ class QuestionBarWrapper extends Component {
     this.interval = setInterval(() => this.props.nextQuestionPage(), questionRefresh);
   }
   submitModal(handleField) {
-    const chosenHandle = handleField.value.trim() || 'Anonymous';
-    console.log('in container', this.state.clickedQquestion);
+    const chosenHandle = handleField;
     this.props.onQuestionClick(
       this.state.clickedQid,
       this.state.clickedQhandle,
@@ -131,7 +130,7 @@ class QuestionBarWrapper extends Component {
       name = 'Anonymous';
     }
     let handleField = name;
-
+    const defaultHandle = 'Anonymous';
     return (
       <div className="question_wrapper">
         <Modal
@@ -140,13 +139,16 @@ class QuestionBarWrapper extends Component {
           onRequestClose={() => this.closeModal()}
         >
           <div className="answer_name">NAME</div>
-          <input
-            className="name_input"
-            type="text"
-            placeholder="Anonymous"
-            maxLength="10"
-            ref={(node) => { handleField = node; }}
-          />
+          <select
+            // maxLength="8"
+            // type="text"
+            className="searchbar_handle"
+            defaultValue={defaultHandle}
+            onChange={(w) => { handleField = w.target.value; }}
+          >
+            <option value={defaultHandle}> {defaultHandle} </option>
+            <option value={name}> {name} </option>
+          </select>
           <button
             className="answer_button"
             onClick={() => this.submitModal(handleField)}
@@ -164,7 +166,6 @@ const mapStateToProps = (state) => {
   const page = getCurrentQuestionPage(state);
   const allQuestions = getQuestions(state);
   const currentQuestions = allQuestions.slice(numberOfQs * page, (numberOfQs * page) + numberOfQs);
-
   return {
     listOfQuestions: currentQuestions,
     allQuestions,
