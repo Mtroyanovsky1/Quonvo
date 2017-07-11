@@ -11,6 +11,13 @@ const questionsReducer = (state = [], action) => {
         }
         return false;
       });
+    case 'REMOVE_USER_QUESTION':
+      return state.filter((question) => {
+        if (question.asker !== action.userId) {
+          return true;
+        }
+        return false;
+      });
     case 'ADD_QUESTION':
       if (action.user._id !== action.question.asker) {
         return state.concat(action.question);

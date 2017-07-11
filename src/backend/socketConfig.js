@@ -1,7 +1,6 @@
 const cookie = require('cookie');
 
 const MAX_USERS_PER_CHAT = 2;
-
 const socketHandler = (io, sessionStore) => (connection) => {
   const socket = connection;
 
@@ -80,7 +79,7 @@ const socketHandler = (io, sessionStore) => (connection) => {
     });
 
     socket.on('disconnect', () => {
-      socket.emit('removeYourQuestion');
+      socket.broadcast.emit('removeYourQuestion', { userId: sesh.passport.user });
       if (!socket.room) {
         socket.emit('endChatResponse', { success: false, reason: 'There\'s no chat to end.' });
         return;
@@ -97,6 +96,7 @@ const socketHandler = (io, sessionStore) => (connection) => {
 
     socket.on('questionClicked', ({ questionId }) => {
       socket.broadcast.emit('removeQuestion', { questionId });
+      console.log('user', sesh.passport.user);
     });
 
     socket.on('newQuestion', (newQuestion) => {

@@ -30,6 +30,21 @@ router.post('/questions/new', (req, res) => {
   .catch(err => res.send(err));
 });
 
+router.post('/questions/delete', (req, res) => {
+  Question.find({ asker: req.body.userId })
+  .then((questions) => {
+    questions.map((question) => {
+      const currentQuestion = question;
+      currentQuestion.live = false;
+      return question.save();
+    });
+  })
+  .then(() => {
+    res.json({
+      success: true
+    });
+  });
+});
 router.post('/questions/update', (req, res) => {
   const answerer = req.user.id;
   const id = req.body.questionId;
@@ -66,6 +81,16 @@ router.post('/questions/find', (req, res) => {
   .then(question => res.json({
     success: true,
     question: question.content
+  }))
+  .catch(err => res.send(err));
+});
+
+router.post('/questions/findfull', (req, res) => {
+  const id = req.body.questionId;
+  Question.findById(id)
+  .then(question => res.json({
+    success: true,
+    question
   }))
   .catch(err => res.send(err));
 });
@@ -145,7 +170,8 @@ router.get('/questions/hot', (req, res) => {
           handle: question.handle,
           subject: question.subject,
           id: question.id,
-          createdTime: question.createdTime
+          createdTime: question.createdTime,
+          asker: question.asker
         };
         return newQuestion;
       });

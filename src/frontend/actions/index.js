@@ -7,10 +7,10 @@ import {
    hotQuestions as apiHotQuestions,
    getArchives as apiGetArchives,
    getRankings as apiGetRankings,
-   getUser as apiGetUser
+   getUser as apiGetUser,
+   userQuestions as apiUserQuestions
    } from 'api';
 import { onQuestionCreate } from './chatActions';
-
 const socket = io(DOMAIN);
 
 // thunk
@@ -114,6 +114,16 @@ export const addQuestion = (question, user) => ({
   user
 });
 
+const removeUserQuestion = userId => ({
+  type: 'REMOVE_USER_QUESTION',
+  userId
+});
+
+export const removeUserQuestionThunk = userId => (dispatch) => {
+  dispatch(removeUserQuestion(userId));
+  apiUserQuestions(userId);
+};
+
 const newQuestion = (subject, content, id, handle) => ({
 
   type: 'NEW_QUESTION',
@@ -207,8 +217,16 @@ export const loadMoreQuestionsThunk = (limit, date) => (dispatch) => {
   .then((responseJson) => {
     // console.log(responseJson);
     // select fields to keep, don't store whole mongo object
-    const qs = responseJson.questions.map(({ id, content, subject, bounty, handle, createdTime }) =>
-    ({ id, content, subject, bounty, handle, createdTime }));
+    const qs = responseJson.questions.map(({
+      id,
+      content,
+      subject,
+      bounty,
+      handle,
+      createdTime,
+      asker
+    }) =>
+    ({ id, content, subject, bounty, handle, createdTime, asker }));
     dispatch(loadQuestions(qs));
   })
   .catch((err) => {

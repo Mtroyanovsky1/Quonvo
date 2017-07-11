@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newUserThunk } from 'actions';
-import { getChats, areArchivesOpen, areRankingsOpen } from 'reducers';
+import { getChats, areArchivesOpen, areRankingsOpen, getUser } from 'reducers';
 import io from 'socket.io-client';
 import ParentPage from '../presentationalComponents/ParentPage';
 
@@ -11,7 +11,6 @@ class ParentPageWrapper extends Component {
 
     this.state = { socket: io(DOMAIN) };
   }
-
   componentDidMount() {
     this.props.newUser();
   }
@@ -27,7 +26,8 @@ const mapStateToProps = state => ({
   chats: Object.keys(getChats(state))
           .map(key => Object.assign({}, getChats(state)[key], { chatIndex: key })),
   archives: areArchivesOpen(state),
-  rankings: areRankingsOpen(state)
+  rankings: areRankingsOpen(state),
+  user: getUser(state)
 });
 
 export default connect(mapStateToProps, { newUser: newUserThunk })(ParentPageWrapper);
