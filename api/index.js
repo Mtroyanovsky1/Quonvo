@@ -54,3 +54,4 @@ export const getArchives = (subject, pageNumber, limit) => get(`${urlRoot}/archi
 export const getRankings = topic => get(`${urlRoot}/rankings/get?topic=${topic}`);
 export const getQuestion = questionId => post(`${urlRoot}/questions/find`, { questionId });
 export const getUser = userId => get(`${urlRoot}/user/get`);
+export const userQuestions = userId => post(`${urlRoot}/questions/delete`, { userId });
