@@ -79,7 +79,6 @@ const socketHandler = (io, sessionStore) => (connection) => {
     });
 
     socket.on('disconnect', () => {
-      console.log('userLeft', sesh.passport.user)
       socket.broadcast.emit('removeYourQuestion', { userId: sesh.passport.user });
       if (!socket.room) {
         socket.emit('endChatResponse', { success: false, reason: 'There\'s no chat to end.' });

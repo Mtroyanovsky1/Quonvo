@@ -7,6 +7,7 @@ import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previous
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
 
+
 const limit = 1000;
 const questionRefresh = 40000; // TODO make a realistic value
 const numberOfQs = 5;

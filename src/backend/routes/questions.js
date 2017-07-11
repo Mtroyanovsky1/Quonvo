@@ -33,7 +33,6 @@ router.post('/questions/new', (req, res) => {
 router.post('/questions/delete', (req, res) => {
   Question.find({ asker: req.body.userId })
   .then((questions) => {
-    console.log('I DEF GOT HERE')
     questions.map((question) => {
       const currentQuestion = question;
       currentQuestion.live = false;
@@ -82,6 +81,16 @@ router.post('/questions/find', (req, res) => {
   .then(question => res.json({
     success: true,
     question: question.content
+  }))
+  .catch(err => res.send(err));
+});
+
+router.post('/questions/findfull', (req, res) => {
+  const id = req.body.questionId;
+  Question.findById(id)
+  .then(question => res.json({
+    success: true,
+    question
   }))
   .catch(err => res.send(err));
 });
