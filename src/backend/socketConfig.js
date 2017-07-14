@@ -9,7 +9,10 @@ const socketHandler = (io, sessionStore) => (connection) => {
     console.log('Socket connection attempted without user cookie');
     return;
   }
-  const tS = cookie.parse(socket.handshake.headers.cookie)['connect.sid'];
+  let tS = cookie.parse(socket.handshake.headers.cookie)['connect.sid'];
+  if (!tS) {
+    tS = '1:1.1';
+  }
   const sessionID = tS.split('.')[0].split(':')[1];
   sessionStore.get(sessionID)
   .then((sesh) => {
