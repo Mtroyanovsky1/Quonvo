@@ -4,13 +4,19 @@ import React from 'react';
 const SplashPage = ({ onPressButton }) => (
   <div>
     <div onClick={onPressButton} className="main_container_splash">
-      <div className="logo_container" >
+      <div className="logo_container_first" >
         <img alt="" className="logo_icon" src="assets/quonvologo.png" />
         <button type="button" className="login_button">Login</button>
+
       </div>
+      <div className="logo_container_second" >
+        <img alt="" className="down_arrow" src="assets/down-arrow.svg" />
+      </div>
+
     </div>
     <div onClick={onPressButton} className="row_2">
       <div className="description_container" >
+        <img alt="" className="main_logo" src="assets/main_logo.png" />
         <h1 className="description_row_2">When you need answers fast</h1>
         <h1 className="description_row_2">Quonvo is your solution</h1>
       </div>
@@ -82,9 +88,23 @@ const SplashPage = ({ onPressButton }) => (
       </div>
 
     </div>
+    <div onClick={onPressButton} className="row_3">
+      <div className="instruction_container_main row">
+        <div className="col-md-6 ask_container" >
+          <h1 className="ask_question">Find old questions</h1>
+          <p className="icon_details"> When someone clicks on your question, a chat room will appear and you can you submit the
+          answer from there.
+          </p>
+        </div>
+        <div className="col-md-6 instruction_container">
+          <img alt="" className="question_icon" src="assets/archives.png" />
+        </div>
+      </div>
+
+    </div>
     <div onClick={onPressButton} className="row_4">
-      <div className="logo_container" >
-        <h1 className="icon_description"></h1>
+      <div className="footer_container" >
+        <h1 className="footer_description">@Quonvo Inc - Insert company moto here. All rights reserve.</h1>
       </div>
     </div>
   </div>
