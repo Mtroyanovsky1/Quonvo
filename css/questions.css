@@ -80,7 +80,7 @@
 .answer_button {
   background-color: lightblue;
   height: 40px;
-  margin-top: 15px;
+  /*margin-top: 15px;*/
 }
 .answer_name{
   font-family: Roboto;
@@ -265,7 +265,7 @@
   text-overflow: ellipsis;
   word-wrap: break-word;
   overflow: hidden;
-  max-height: 3.6em;
+  max-height: 14.4em;
   line-height: 1.8em;
 }
 
@@ -326,7 +326,7 @@
   align-items: center;
   /*position: relative;*/
   position: relative;
-  border-radius: 0px 35px 0px 0px;
+  border-radius: 0px 20px 0px 0px;
   z-index: 5;
 
 }
@@ -367,7 +367,7 @@
     align-items: center;
     /*position: relative;*/
     position: relative;
-    border-radius: 0px 35px 0px 0px;
+    border-radius: 0px 15px 0px 0px;
     z-index: 5;
 
   }
@@ -431,6 +431,7 @@
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   display: flex;
+  margin-bottom: 15px;
   flex-direction: column;
   overflow-y: auto;
 

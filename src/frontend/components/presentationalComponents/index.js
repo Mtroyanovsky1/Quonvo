@@ -20,3 +20,4 @@ export { default as Modal } from './Modal';
 export { default as TabsBar } from './TabsBar';
 export { default as Rankings } from './Rankings';
 export { default as SignUp } from './SignUp';
+export { default as SplashPage } from './SplashPage';

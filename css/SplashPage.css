@@ -1,0 +1,126 @@
+.main_container_splash {
+  background-color: #4095AA;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo_icon {
+  width: 50%;
+
+}
+.login_button {
+  background-color: #8FC1D7;
+  padding: 10px;
+  width: 175px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.login_button:hover {
+  background-color: #FFFFFF;
+}
+.row_2 {
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row2_icon {
+  height: 100px;
+}
+.row2_icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description_icons_container {
+  width: 100%;
+  padding: 5%;
+}
+.description_row_2 {
+  color: #66625b;
+  font-size: 2.25em;
+  font-weight: 400;
+}
+.icon_description {
+  color: #66625b;
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 400;
+}
+.icon_details {
+  color: #66625b;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+}
+.row_3 {
+  height: 100vh;
+  background-color: #CFDEE2;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;*/
+}
+.title_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  padding-left: 75px;
+
+}
+.ask_question {
+  color: #66625b;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.instruction_title {
+  font-size: 4em;
+  color: #5C8A96;
+  font-weight: 400;
+  text-align: left;
+}
+.instruction_container_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.instruction_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.ask_container {
+  width: 40%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.question_icon {
+  height: 450px;
+  border-radius: 10px;
+}
+.row_4 {
+  height: 100vh;
+  background-color: #8FC1D7;
+}

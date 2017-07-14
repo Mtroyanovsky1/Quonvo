@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './presentationalComponents/App';
 import DevApp from './devComponents/DevApp';
 
+
 const AppComponent = process.env.NODE_ENV === 'development' ? DevApp : App;
 
 const Root = ({ store }) => (
