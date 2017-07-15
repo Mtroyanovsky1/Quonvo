@@ -131,11 +131,13 @@ class QuestionBarWrapper extends Component {
     let handleField = name;
     const defaultHandle = 'Anonymous';
     return (
-      <div className="question_wrapper">
+      <div className="question_wrapper" >
         <Modal
+          className="question_wrapper_answer"
           contentLabel="Modal"
           isOpen={this.state.answerModalActive}
           onRequestClose={() => this.closeModal()}
+
         >
           <div className="answer_name">NAME</div>
           <select

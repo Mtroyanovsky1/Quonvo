@@ -105,6 +105,9 @@
   justify-content: flex-start;
   align-items: center;
   padding: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #4095AA;
 }
 
 .right_arrow {
@@ -164,6 +167,7 @@
 .navigation_bar{
   /*flex: 0.5;
   display: flex;*/
+  background-color: #4095AA;
   width: 100%;
   padding: 10px;
   padding-bottom: 25px;
@@ -245,6 +249,9 @@
   overflow:scroll;
   overflow-y: scroll;
   /*padding-top: 1em;*/
+  background-color: #E9EAEA;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .right {

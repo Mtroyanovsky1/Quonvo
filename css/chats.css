@@ -86,7 +86,7 @@ textarea{
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  background-color: #E6E7E8;
+  background-color: #4095AA;
   border-bottom: 1px solid transparent;
 }
 
@@ -124,6 +124,7 @@ textarea{
   flex-direction: column;
   width: 100%;
   padding-top: 1em;
+  background-color: #E9EAEA;
 }
 
 
@@ -227,7 +228,7 @@ textarea{
   padding: 10px;
   /*padding-bottom: 15px;*/
   max-height: 150px;
-  background-color: #E6E7E8;
+  background-color: #4095AA;
 }
 .chat_question_text{
     font-family : Roboto;
@@ -320,7 +321,7 @@ max-height: 50%;
   .row3{
     margin: 0px;
     padding: 10px;
-    background-color: #E6E7E8;
+    background-color: #4095AA;
 
   }
   .send_row{
@@ -334,7 +335,7 @@ max-height: 50%;
   }
 
 .send_message{
-  background : rgba(238, 203, 174, 1);
+  background-color: lightblue;
   border-radius : 5px;
   -moz-border-radius : 5px;
   -webkit-border-radius : 5px;
@@ -368,7 +369,7 @@ max-height: 50%;
 .send_message:hover, .send_message:focus, .send_message:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  background-color: #C6AB94;
+  background-color: #FFFFFF;
 }
 
     /*THIS IS NOW CHAT FOR SHAREDSCREEN*/
