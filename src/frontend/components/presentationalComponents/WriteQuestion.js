@@ -61,7 +61,7 @@ const WriteQuestion = ({ onSubmit, afterSubmit, topics, firstName }) => {
             </select>
           </div>
           <div className="button_container">
-            <button className="answer_button" type="submit"> GET AN ANSWER </button>
+            <button className="answer_button_main" type="submit"> GET AN ANSWER </button>
           </div>
         </div>
       </div>

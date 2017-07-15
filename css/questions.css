@@ -80,7 +80,15 @@
 .answer_button {
   background-color: lightblue;
   height: 40px;
-  /*margin-top: 15px;*/
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  font-family : Roboto;
+  font-size : 1em;
+  font-weight: bold;
+  line-height : 18px;
+  letter-spacing : 1.3px;
 }
 .answer_name{
   font-family: Roboto;
