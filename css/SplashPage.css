@@ -153,6 +153,10 @@
   height: 65vh;
   border-radius: 10px;
 }
+.archives_icon {
+  width: 90%;
+  border-radius: 10px;
+}
 .row_4 {
   height: 25vh;
 }

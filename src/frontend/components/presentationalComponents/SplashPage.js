@@ -97,7 +97,7 @@ const SplashPage = ({ onPressButton }) => (
           </p>
         </div>
         <div className="col-md-6 instruction_container">
-          <img alt="" className="question_icon" src="assets/archives.png" />
+          <img alt="" className="archives_icon" src="assets/archives.png" />
         </div>
       </div>
 
