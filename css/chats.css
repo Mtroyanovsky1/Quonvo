@@ -1,7 +1,7 @@
 
 
 .chat_master {
-  width: 65%;
+  width: 85%;
   height: 93vh;
   align-self: center;
   margin-left: 11%
@@ -86,7 +86,7 @@ textarea{
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  background-color: #E6E7E8;
+  background-color: #4095AA;
   border-bottom: 1px solid transparent;
 }
 
@@ -227,7 +227,7 @@ textarea{
   padding: 10px;
   /*padding-bottom: 15px;*/
   max-height: 150px;
-  background-color: #E6E7E8;
+  background-color: #4095AA;
 }
 .chat_question_text{
     font-family : Roboto;
@@ -320,7 +320,7 @@ max-height: 50%;
   .row3{
     margin: 0px;
     padding: 10px;
-    background-color: #E6E7E8;
+    background-color: #4095AA;
 
   }
   .send_row{
@@ -334,7 +334,7 @@ max-height: 50%;
   }
 
 .send_message{
-  background : rgba(238, 203, 174, 1);
+  background : lightblue;
   border-radius : 5px;
   -moz-border-radius : 5px;
   -webkit-border-radius : 5px;
@@ -368,7 +368,7 @@ max-height: 50%;
 .send_message:hover, .send_message:focus, .send_message:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  background-color: #C6AB94;
+  background: lightblue;
 }
 
     /*THIS IS NOW CHAT FOR SHAREDSCREEN*/
@@ -456,7 +456,7 @@ position:absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  background : #EECBAE;
+  background : #4095AA;
   background : rgba(238, 203, 174, 1);
   border-radius : 12px;
   -moz-border-radius : 12px;
@@ -490,7 +490,7 @@ position:absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      background : #EECBAE;
+      background : #4095AA;
       background : rgba(238, 203, 174, 1);
       border-radius : 12px;
       align-self: left;

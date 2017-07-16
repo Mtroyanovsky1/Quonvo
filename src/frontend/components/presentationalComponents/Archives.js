@@ -21,7 +21,7 @@ const Archives = ({
     <div className="archive_question_header">
       <span className="bold_caslon">Archives </span>
       <div onClick={() => closeArchives()} className="right_arrow">
-        <img alt="" src="assets/arrow-01.png" className="icon_archives" />
+        <img alt="" src="assets/Blue Arrow.svg" className="icon_archives" />
       </div>
     </div>
     <div className="navigation_bar">

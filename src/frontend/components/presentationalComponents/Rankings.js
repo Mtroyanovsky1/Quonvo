@@ -7,7 +7,7 @@ const rankings = ({ topics, setTopic, listRankings, closeRankings, currentTopic 
       <div className="Rankings_header">
         <span className="header_text"> Rankings </span>
         <div onClick={() => closeRankings()} className="rankings_arrow">
-          <img alt="" src="assets/arrow-01.png" className="icon_ranking_arrow" />
+          <img alt="" src="assets/Blue Arrow.svg" className="icon_ranking_arrow" />
         </div>
       </div>
       <div className="row rankings_subjects">
