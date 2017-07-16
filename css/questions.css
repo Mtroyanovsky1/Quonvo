@@ -158,8 +158,7 @@
   display: flex;
   /*min-width: 100%;*/
   flex-direction: column;
-  background : #EECBAE;
-  background : rgba(238, 203, 174, 1);
+  background : lightblue;
   border-radius : 12px;
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
@@ -259,7 +258,7 @@
 }
 
 .questionTALL:hover{
-  background : #dbbaa0;
+  background : #4095AA;
 }
 
 .question_text{
@@ -334,6 +333,7 @@
   align-items: center;
   /*position: relative;*/
   position: relative;
+  border-right: 1px solid #4095AA;
   border-radius: 0px 20px 0px 0px;
   z-index: 5;
 
