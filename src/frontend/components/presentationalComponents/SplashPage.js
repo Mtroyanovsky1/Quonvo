@@ -58,7 +58,7 @@ const SplashPage = ({ onPressButton }) => (
       </div>
 
     </div>
-    <div onClick={onPressButton} className="row_35">
+    <div onClick={onPressButton} className="row_3">
       <div className="instruction_container_main row">
         <div className="col-md-6 ask_container" >
           <h1 className="ask_question_white">Waiting for someone to respond</h1>

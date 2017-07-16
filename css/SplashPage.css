@@ -32,8 +32,8 @@
 }
 .down_arrow {
   margin-top: 150px;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 .main_logo {
   margin-top: 50px;
@@ -47,12 +47,11 @@
   width: 150px;
   border: none;
   border-radius: 5px;
-  color: black;
   font-size: 1.5em;
   font-weight: 400;
 }
 .login_button:hover {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .row_2 {
   height: auto;
@@ -82,62 +81,36 @@
   padding: 5%;
 }
 .description_row_2 {
-  color: #4095AA;
-  font-size: 2.5em;
-  font-weight: 500;
+  color: #66625b;
+  font-size: 2em;
+  font-weight: 400;
   font-family: Raleway;
 }
 .icon_description {
-  color: #4095AA;
-  font-size: 2em;
+  color: #66625b;
+  font-size: 1.5em;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-family: Raleway;
 }
 .icon_details {
-  color: #4095AA;
-  font-size: 1.5em;
-  font-weight: 500;
-  text-align: center;
-  font-family: Raleway;
-}
-
-.icon_details_white {
-  color: white;
-  font-size: 1.5em;
-  font-weight: 400;
-  text-align: center;
-  font-family: Raleway;
-}
-
-.icon_details_black {
-  color: black;
-  font-size: 1.5em;
+  color: #66625b;
+  font-size: 1.2em;
   font-weight: 400;
   text-align: center;
   font-family: Raleway;
 }
 .row_3 {
   height: 100vh;
-  background-color: #E6ECF0;
+  background-color: #CFDEE2;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
-.row_35 {
-  height: 100vh;
-  background-color: #4095AA;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .row_3_lightBlue {
   height: 100vh;
-  background-color: lightblue;
+  background-color: #CFDEE2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,34 +125,16 @@
 
 }
 .ask_question {
-  color: #4095AA;
-  font-size: 2.5em;
-  font-weight: 500;
+  color: #66625b;
+  font-size: 1.8em;
+  font-weight: 400;
   font-family: Raleway;
-  text-align: center;
-
-}
-.ask_question_white {
-  color: white;
-  font-size: 2.5em;
-  font-weight: 500;
-  font-family: Raleway;
-  text-align: center;
-
-}
-
-.ask_question_black {
-  color: black;
-  font-size: 2.5em;
-  font-weight: 500;
-  font-family: Raleway;
-  text-align: center;
 
 }
 .instruction_title {
   font-size: 4em;
-  color: #4095AA;
-  font-weight: 500;
+  color: #5C8A96;
+  font-weight: 400;
   text-align: left;
   font-family: Raleway;
 }
@@ -207,7 +162,7 @@
   border-radius: 10px;
 }
 .archives_icon {
-  width: 95%;
+  width: 80%;
   border-radius: 10px;
 }
 .row_4 {
