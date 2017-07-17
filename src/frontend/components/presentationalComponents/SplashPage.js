@@ -21,7 +21,7 @@ const SplashPage = ({ onPressButton }) => (
       </div>
       <div className="description_icons_container ">
         <div className="col-md-4 row2_icon_container">
-        <img alt="" className="row2_icon" src="assets/trophy.svg" />
+        <img alt="" className="row2_icon" src="assets/chat.svg" />
           <h1 className="icon_description">Ask Questions</h1>
           <p className="icon_details"> If you have a question, Quonvo will find someone who you can chat with
           </p>
@@ -34,7 +34,7 @@ const SplashPage = ({ onPressButton }) => (
           </p>
         </div>
         <div className="col-md-4 row2_icon_container">
-        <img alt="" className="row2_icon" src="assets/trophy.svg" />
+        <img alt="" className="row2_icon" src="assets/archive_icon-01.png" />
           <h1 className="icon_description">Read Archives</h1>
           <p className="icon_details"> On Quonvo you can read anonymous conversations that have occured and learn new things
           </p>
@@ -53,7 +53,7 @@ const SplashPage = ({ onPressButton }) => (
           </p>
         </div>
         <div className="col-md-6 instruction_container">
-          <img alt="" className="question_icon" src="assets/question.png" />
+          <img alt="" className="question_icon" src="assets/Ask a question SVG.svg" />
         </div>
       </div>
 

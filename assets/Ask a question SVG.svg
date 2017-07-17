@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1632px" height="1558px" viewBox="0 0 1632 1558" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="128" y="216" width="1376" height="362" rx="40"></rect>
+        <rect id="path-2" x="116" y="820" width="1376" height="142" rx="30"></rect>
+        <rect id="path-3" x="0" y="0" width="1376" height="142" rx="30"></rect>
+        <rect id="path-4" x="0" y="0" width="487.159443" height="142" rx="30"></rect>
+        <rect id="path-5" x="0" y="0" width="656.249968" height="142" rx="30"></rect>
+    </defs>
+    <g id="FINAL-LOGO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-6" stroke="#979797" x="0.5" y="0.5" width="1631" height="1557" rx="40"></rect>
+        <g id="Rectangle-7" opacity="0.517663043">
+            <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <rect stroke="#979797" stroke-width="1" x="128.5" y="216.5" width="1375" height="361" rx="40"></rect>
+        </g>
+        <text id="How’s-the-social-lif" font-family="Roboto-Regular, Roboto" font-size="60" font-weight="normal" fill="#000000">
+            <tspan x="184" y="328">How’s the social life? Do people go off campus?</tspan>
+        </text>
+        <text id="QUESTION" font-family="Roboto-Regular, Roboto" font-size="65" font-weight="normal" fill="#000000">
+            <tspan x="128" y="143">QUESTION</tspan>
+        </text>
+        <text id="HANDLE" font-family="Roboto-Regular, Roboto" font-size="65" font-weight="normal" fill="#000000">
+            <tspan x="128" y="733">HANDLE</tspan>
+        </text>
+        <text id="SUBJECT" font-family="Roboto-Regular, Roboto" font-size="65" font-weight="normal" fill="#000000">
+            <tspan x="128" y="1123">SUBJECT</tspan>
+        </text>
+        <g id="Rectangle-8">
+            <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-2"></use>
+            <rect stroke="#979797" stroke-width="1" x="116.5" y="820.5" width="1375" height="141" rx="30"></rect>
+        </g>
+        <g id="Handle" transform="translate(116.000000, 820.000000)">
+            <g id="Rectangle-8-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="1375" height="141" rx="30"></rect>
+            </g>
+            <polygon id="Triangle-3" fill="#000000" points="1338 43 1354 67 1322 67"></polygon>
+            <polygon id="Triangle-3-Copy" fill="#000000" transform="translate(1338.000000, 87.000000) scale(-1, -1) translate(-1338.000000, -87.000000) " points="1338 75 1354 99 1322 99"></polygon>
+            <text id="Ally" font-family="Roboto-Regular, Roboto" font-size="55" font-weight="normal" fill="#000000">
+                <tspan x="68" y="92">Ally</tspan>
+            </text>
+        </g>
+        <g id="Handle-Copy" transform="translate(116.000000, 1200.000000)">
+            <g id="Rectangle-8-Copy">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="486.159443" height="141" rx="30"></rect>
+            </g>
+            <polygon id="Triangle-3" fill="#000000" points="450 43 466 67 434 67"></polygon>
+            <polygon id="Triangle-3-Copy" fill="#000000" transform="translate(450.000000, 87.000000) scale(-1, -1) translate(-450.000000, -87.000000) " points="450 75 466 99 434 99"></polygon>
+            <text id="Babson-College" font-family="Roboto-Regular, Roboto" font-size="55" font-weight="normal" fill="#000000">
+                <tspan x="23" y="88">Babson College</tspan>
+            </text>
+        </g>
+        <g id="Handle-Copy-2" transform="translate(835.000000, 1196.000000)">
+            <g id="Rectangle-8-Copy">
+                <use fill="#4095AA" fill-rule="evenodd" xlink:href="#path-5"></use>
+                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="655.249968" height="141" rx="30"></rect>
+            </g>
+            <text id="GET-AN-ANSWER" font-family="Roboto-Regular, Roboto" font-size="55" font-weight="normal" fill="#000000">
+                <tspan x="115.37596" y="96">GET AN ANSWER</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
