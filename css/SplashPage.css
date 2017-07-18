@@ -1,0 +1,225 @@
+.main_container_splash {
+  background-color: #4095AA;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo_container_first {
+  display: flex;
+  height: 60vh;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.logo_container_second {
+  display: flex;
+  height: 40vh;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.logo_icon {
+  width: 50%;
+
+}
+.down_arrow {
+  margin-top: 150px;
+  height: 50px;
+  width: 50px;
+}
+.main_logo {
+  margin-top: 50px;
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+}
+.login_button {
+  background-color: #8FC1D7;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.login_button:hover {
+  opacity: 0.8
+}
+.row_2 {
+  height: auto;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row2_icon {
+  height: 100px;
+}
+.row2_icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description_icons_container {
+  width: 100%;
+  padding: 5%;
+}
+.description_row_2 {
+  color: #66625b;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: Raleway;
+}
+.icon_description {
+  color: #4095AA;
+  font-size: 1.8em;
+  text-align: center;
+  font-weight: 500;
+  font-family: Raleway;
+}
+.icon_details {
+  color: #4095AA;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  font-family: Raleway;
+}
+
+.icon_details_black {
+  color: black;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  font-family: Raleway;
+}
+.icon_details_white {
+  color: white;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  font-family: Raleway;
+}
+.row_3 {
+  height: 100vh;
+  background-color: #CFDEE2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row_3_darkblue {
+  height: 100vh;
+  background-color: #4095AA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row_3_lightBlue {
+  height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  padding-left: 75px;
+
+}
+.ask_question {
+  color: #4095AA;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-family: Raleway;
+
+}
+
+.ask_question_white {
+  color: white;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-family: Raleway;
+
+}
+
+.ask_question_black {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-family: Raleway;
+
+}
+.instruction_title {
+  font-size: 4em;
+  color: #5C8A96;
+  font-weight: 400;
+  text-align: left;
+  font-family: Raleway;
+}
+.instruction_container_main {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  width: 80%;
+}
+.instruction_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.ask_container {
+  /*width: 40%;*/
+  padding: 50px;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.question_icon {
+  height: 65vh;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.archives_icon {
+  width: 120%;
+  border-radius: 10px;
+}
+.row_4 {
+  height: 25vh;
+}
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #30A1C0;
+  height:25vh;
+}
+.footer_description {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #FFFFFF;
+}

@@ -7,6 +7,7 @@
   width: 100%;
   margin-left: 7%;
   margin-top: 3vh;
+  border: 1px solid #4095AA;
   height: 93vh;
   border-radius : 15px;
   -moz-border-radius : 14px  / 15px;
@@ -34,8 +35,7 @@
   /*line-height: 2.7vw;*/
   /*line-height: 50px;*/
   letter-spacing : 0.05vw;
-  color : #231F20;
-  color : rgb(35, 31, 32);
+  color : #4095AA;
 
 }
 
@@ -49,8 +49,8 @@
 }
 .icon_ranking_arrow{
   text-align: right;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   transform: rotate(90deg);
   /*margin-left: 58%;*/
   cursor: pointer;
@@ -58,6 +58,7 @@
 
 .rankings_arrow:hover{
   opacity: 0.5;
+  pointer: cursor;
 }
 .rankings_subjects{
   width: 100%;
@@ -77,6 +78,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   text-align: center;
+  color: #4095AA;
 }
 
 @media (max-width: 992px) {
@@ -118,7 +120,7 @@
   /*margin: 5px 0px 5px 0px;*/
   background-color: white;
   border-radius: 3px;
-  border: 1px solid lightblue;
+  border-top: 2px solid #4095AA;
   padding: 20px;
 
 

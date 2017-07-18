@@ -11,6 +11,7 @@ import {
    userQuestions as apiUserQuestions
    } from 'api';
 import { onQuestionCreate } from './chatActions';
+
 const socket = io(DOMAIN);
 
 // thunk
@@ -189,6 +190,14 @@ export const previousPage = () => ({
 
 export const pageZero = () => ({
   type: 'PAGE_ZERO'
+});
+
+export const goToLogin = () => ({
+  type: 'GO_TO_LOGIN'
+});
+
+export const info = () => ({
+  type: 'INFO'
 });
 
 export const loading = () => ({
