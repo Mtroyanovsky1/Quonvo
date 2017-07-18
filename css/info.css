@@ -1,0 +1,33 @@
+.info_full{
+  margin-left: 5%;
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 40%;
+  align-items: center;
+  background : #FFFFFF;
+  background : rgba(255, 255, 255, 1);
+  height: 83vh;
+  overflow: scroll;
+  border: 1px solid #4095AA;
+  border-radius : 15px;
+  -moz-border-radius : 14px  / 15px;
+  -webkit-border-radius : 14px  / 15px;
+}
+
+.info_title{
+  color: #4095AA;
+  font-weight: bold;
+  font-family: Raleway;
+  margin-bottom: 20px;
+}
+
+.info_text{
+  text-align: center;
+  font-family: Raleway;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+  padding: 13px;
+
+}

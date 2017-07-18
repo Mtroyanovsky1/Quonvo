@@ -12,3 +12,4 @@ export * from './signin.css';
 export * from './tabs.css';
 export * from './rankings.css';
 export * from './SplashPage.css';
+export * from './info.css';

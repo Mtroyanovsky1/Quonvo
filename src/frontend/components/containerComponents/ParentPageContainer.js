@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newUserThunk } from 'actions';
-import { getChats, areArchivesOpen, areRankingsOpen, getUser } from 'reducers';
+import { getChats, areArchivesOpen, areRankingsOpen, getUser, isInfoOpen } from 'reducers';
 import io from 'socket.io-client';
 import ParentPage from '../presentationalComponents/ParentPage';
 
@@ -27,6 +27,7 @@ const mapStateToProps = state => ({
           .map(key => Object.assign({}, getChats(state)[key], { chatIndex: key })),
   archives: areArchivesOpen(state),
   rankings: areRankingsOpen(state),
+  info: isInfoOpen(state),
   user: getUser(state)
 });
 

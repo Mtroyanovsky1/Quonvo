@@ -80,14 +80,16 @@ const pageNumber = (state = 0, action) => {
 };
 
 // TODO this in in the models and the reducers. Import from 1 location?
-const topics = () => ['Academics', 'Travel', 'Entertainment', 'Advice'];
+const topics = () => ['Academics', 'Extracurriculars', 'Social', 'Miscellaneous'];
 
 const EMPTY = 'empty-0';
 const ARCHIVES = 'archives-0';
 const RANKINGS = 'rankings-0';
 const chat = id => `chat-${id}`;
-const UIState = (state = EMPTY, action) => {
+const UIState = (state = 'Info', action) => {
   switch (action.type) {
+    case 'INFO':
+      return 'Info';
     case 'FULL_ARCHIVES':
       return ARCHIVES;
     case 'CLOSE_ARCHIVES':
@@ -128,6 +130,7 @@ export const getCurrentQuestionPage = state => state.currentQuestionPage;
 export const getUser = state => state.newUser;
 export const getChats = state => state.chats;
 export const getLoading = state => state.loading;
+export const getSplash = state => state.splash;
 export const getChat = (state, index) => chatsSels.getChat(state.chats, index);
 export const getMessages = (state, index) => chatsSels.getMessages(state.chats, index);
 export const getChattingPartner = (state, idx) => chatsSels.getChattingPartner(state.chats, idx);
@@ -138,6 +141,7 @@ export const getQuestion = (state, index) => chatsSels.getQuestion(state.chats, 
 export const getArchives = state => state.newArchives;
 export const areArchivesOpen = state => state.UIState === ARCHIVES;
 export const areRankingsOpen = state => state.UIState === RANKINGS;
+export const isInfoOpen = state => state.UIState === 'Info';
 export const getRankings = state => state.newRankings;
 export const getUIstate = state => state.UIState;
 export const getPageNumber = state => state.pageNumber;

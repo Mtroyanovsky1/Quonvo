@@ -1,7 +1,8 @@
 import React from 'react';
 import { ChatContainer, QuestionBarContainer, SideBarContainer, TabsBarContainer, ArchivesContainer, RankingsContainer } from '../containerComponents';
+import Info from './Info';
 
-const ParentPage = ({ chats, archives, rankings }) => (
+const ParentPage = ({ chats, archives, rankings, info }) => (
   <div className="page_container">
     <QuestionBarContainer />
     <div className="center">
@@ -10,6 +11,7 @@ const ParentPage = ({ chats, archives, rankings }) => (
         <ChatContainer key={chat.chatIndex} chatIndex={chat.chatIndex} /> : null))}
       {archives ? <ArchivesContainer /> : null}
       {rankings ? <RankingsContainer /> : null}
+      {info ? <Info /> : null}
     </div>
     <SideBarContainer />
   </div>

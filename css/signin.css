@@ -10,21 +10,20 @@
 }
 .title {
 
-  font-family : Roboto;
+  font-family : Raleway;
   font-size : 13px;
   line-height : 20px;
   letter-spacing : 0.1em;
-  color : #231F20;
-  color : rgb(35, 31, 32);
+  color : #4095AA;
 
 
 }
 
 .title2 {
-  font-family: "Caslon Old Face Heavy BT", serif;
+  font-family: Raleway;
   font-size : 60px;
   line-height : 32px;
-  color : black;
+  color : #4095AA;
   z-index: 4000;
 
 }
@@ -63,8 +62,7 @@ padding-top: 1%;
   /*margin-left: auto;
   margin-right: auto;*/
 
-  background : #D79B80;
-  background : rgba(215, 155, 128, 1);
+  background : #4095AA;
   border-radius : 12px;
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
@@ -87,7 +85,7 @@ padding-top: 1%;
 
 .ask_button:hover {
   width: 95%;
-  background-color:rgba(190, 130, 103, 1);
+  opacoty: 0.8;
 
 }
 .line{
@@ -138,6 +136,7 @@ padding-top: 1%;
   line-height: 12.76px;
   font-size: .8em;
   letter-spacing: 1.3px;
+  color: #4095AA;
 
 }
 
