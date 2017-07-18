@@ -43,6 +43,7 @@
 }
 .login_button {
   background-color: #8FC1D7;
+  color: white;
   padding: 10px;
   width: 150px;
   border: none;
@@ -51,7 +52,7 @@
   font-weight: 400;
 }
 .login_button:hover {
-  background-color: #FFFFFF;
+  opacity: 0.8
 }
 .row_2 {
   height: auto;
@@ -87,15 +88,30 @@
   font-family: Raleway;
 }
 .icon_description {
-  color: #66625b;
-  font-size: 1.5em;
+  color: #4095AA;
+  font-size: 1.8em;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   font-family: Raleway;
 }
 .icon_details {
-  color: #66625b;
-  font-size: 1.2em;
+  color: #4095AA;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  font-family: Raleway;
+}
+
+.icon_details_black {
+  color: black;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  font-family: Raleway;
+}
+.icon_details_white {
+  color: white;
+  font-size: 1.8em;
   font-weight: 400;
   text-align: center;
   font-family: Raleway;
@@ -108,9 +124,19 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.row_3_darkblue {
+  height: 100vh;
+  background-color: #4095AA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .row_3_lightBlue {
   height: 100vh;
-  background-color: #CFDEE2;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,9 +151,25 @@
 
 }
 .ask_question {
-  color: #66625b;
-  font-size: 1.8em;
-  font-weight: 400;
+  color: #4095AA;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-family: Raleway;
+
+}
+
+.ask_question_white {
+  color: white;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-family: Raleway;
+
+}
+
+.ask_question_black {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 500;
   font-family: Raleway;
 
 }
@@ -160,9 +202,10 @@
 .question_icon {
   height: 65vh;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 .archives_icon {
-  width: 80%;
+  width: 120%;
   border-radius: 10px;
 }
 .row_4 {

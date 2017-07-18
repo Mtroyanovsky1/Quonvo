@@ -58,7 +58,7 @@ const SplashPage = ({ onPressButton }) => (
       </div>
 
     </div>
-    <div onClick={onPressButton} className="row_3">
+    <div onClick={onPressButton} className="row_3_darkblue">
       <div className="instruction_container_main row">
         <div className="col-md-6 ask_container" >
           <h1 className="ask_question_white">Waiting for someone to respond</h1>
@@ -80,7 +80,7 @@ const SplashPage = ({ onPressButton }) => (
           </p>
         </div>
         <div className="col-md-6 instruction_container">
-          <img alt="" className="question_icon" src="assets/answered_question.png" />
+          <img alt="" className="question_icon" src="assets/Chat mockup svg.svg" />
         </div>
       </div>
 
@@ -94,14 +94,17 @@ const SplashPage = ({ onPressButton }) => (
           </p>
         </div>
         <div className="col-md-6 instruction_container">
-          <img alt="" className="archives_icon" src="assets/archives.png" />
+          <img alt="" className="archives_icon" src="assets/Archives SVG.svg" />
         </div>
       </div>
 
     </div>
     <div onClick={onPressButton} className="row_4">
       <div className="footer_container" >
-        <h1 className="footer_description">@Quonvo Inc - Insert company moto here. All rights reserve.</h1>
+        <h1 className="footer_description">If you actually read this part of the site send me an email at
+         <h1 style={{ color: 'black', fontSize: '1.2em' }}>mtroyanovsky1@babson.edu</h1>
+       and ill give you a virtual high five
+        </h1>
       </div>
     </div>
   </div>

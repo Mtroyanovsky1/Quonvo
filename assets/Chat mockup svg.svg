@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2632px" height="2750px" viewBox="0 0 2632 2750" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Chatr mockupo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="2632" height="2750" rx="97"></rect>
+        <rect id="path-2" x="0" y="562.857422" width="2632" height="1887.14258"></rect>
+    </defs>
+    <g id="FINAL-LOGO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chatr-mockupo">
+            <g id="Chat-Mockup">
+                <g id="Rectangle-10">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#979797" stroke-width="5" x="2.5" y="2.5" width="2627" height="2745" rx="97"></rect>
+                </g>
+                <g id="Rectangle-12">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#979797" stroke-width="5" x="2.5" y="565.357422" width="2627" height="1882.14258"></rect>
+                </g>
+            </g>
+            <g id="Go-back-symbol" transform="translate(91.000000, 38.000000)">
+                <circle id="Oval-6" stroke="#000000" fill="#FFFFFF" cx="86" cy="86" r="85.8471751"></circle>
+                <g id="Go-back-arrow" transform="translate(16.000000, 52.000000)">
+                    <path d="M35.5,34.5 L128.5,34.5" id="Line" stroke="#4095AA" stroke-width="15" stroke-linecap="square"></path>
+                    <polygon id="Triangle-4" fill="#4095AA" transform="translate(20.000000, 34.721225) rotate(-90.000000) translate(-20.000000, -34.721225) " points="20 14.7212246 54.2394294 54.7212246 -14.2394294 54.7212246"></polygon>
+                </g>
+            </g>
+            <text id="Conversation-with-Al" font-family="Raleway-Medium, Raleway" font-size="120" font-weight="400" fill="#000000">
+                <tspan x="681.154339" y="167">Conversation with Ally</tspan>
+            </text>
+            <rect id="Rectangle-13" fill="#FFFFFF" x="148" y="315" width="2388" height="200" rx="62"></rect>
+            <text id="What’s-the-social-li" font-family="Raleway-Medium, Raleway" font-size="100" font-weight="400" fill="#000000">
+                <tspan x="490.501525" y="464">What’s the social life at Babson like?</tspan>
+            </text>
+            <rect id="Rectangle-14" fill="#FFFFFF" x="91" y="2494" width="1632" height="205" rx="24"></rect>
+            <text id="Respond-here…" opacity="0.495640851" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                <tspan x="126" y="2569">Respond here…</tspan>
+            </text>
+            <g id="Send-Button" transform="translate(1806.000000, 2494.000000)">
+                <rect id="Rectangle-16" fill="#4095AA" x="0" y="0" width="312" height="205" rx="36"></rect>
+                <text id="Send" font-family="Raleway-Regular, Raleway" font-size="70" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="72" y="127">Send</tspan>
+                </text>
+            </g>
+            <g id="Send-Button-Copy" transform="translate(2223.000000, 2494.000000)">
+                <rect id="Rectangle-16" fill="#4095AA" x="0" y="0" width="312" height="205" rx="36"></rect>
+                <text id="End" font-family="Raleway-Regular, Raleway" font-size="70" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="92" y="127">End</tspan>
+                </text>
+            </g>
+            <g id="Message-1" transform="translate(1509.000000, 701.000000)">
+                <rect id="Rectangle-17" fill="#5FD4D2" x="0" y="0" width="972" height="200" rx="60"></rect>
+                <text id="Hi,-I’m-Ally,-and-I’" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                    <tspan x="57" y="55">Hi, I’m Ally, and I’m planning on </tspan>
+                    <tspan x="57" y="114">coming to Babson, and I was curious </tspan>
+                    <tspan x="57" y="173">how the social life is?</tspan>
+                </text>
+            </g>
+            <g id="Message-1-Copy" transform="translate(1509.000000, 1259.000000)">
+                <rect id="Rectangle-17" fill="#5FD4D2" x="0" y="0" width="972" height="374.63361" rx="60"></rect>
+                <text id="Oh-that’s-awesome.-S" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                    <tspan x="57" y="55">Oh that’s awesome. So do kids party </tspan>
+                    <tspan x="57" y="114">on campus? Or do they go off campus </tspan>
+                    <tspan x="57" y="173">a lot? Oh and also like how many kids </tspan>
+                    <tspan x="57" y="232">are in Frats. Admissions gives me </tspan>
+                    <tspan x="57" y="291">some numbers, but as a student does </tspan>
+                    <tspan x="57" y="350">it feel like everyone is in a frat?</tspan>
+                </text>
+            </g>
+            <g id="Message-1-Copy-2" transform="translate(1509.000000, 2062.000000)">
+                <rect id="Rectangle-17" fill="#5FD4D2" x="0" y="0" width="972" height="328.276032" rx="60"></rect>
+                <text id="OMG,-thank-you-so-mu" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                    <tspan x="57" y="55">OMG, thank you so much, super </tspan>
+                    <tspan x="57" y="114">helpful. I defintely won’t be one of </tspan>
+                    <tspan x="57" y="173">those people going off campus. </tspan>
+                    <tspan x="57" y="232">Anyway, nice to meet you Daniel, Cya </tspan>
+                    <tspan x="57" y="291">on campus</tspan>
+                </text>
+            </g>
+            <g id="Message-2" transform="translate(143.000000, 975.000000)">
+                <rect id="Rectangle-18" fill="#BFB3A2" x="0" y="0" width="1143" height="251" rx="60"></rect>
+                <text id="Hey-Ally,-I’m-Daniel" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                    <tspan x="61" y="62">Hey Ally, I’m Daniel, I’m a rising junior, and I </tspan>
+                    <tspan x="61" y="121">actually was super interested in this when I </tspan>
+                    <tspan x="61" y="180">was thinking of Babson, so I’d love to discuss </tspan>
+                    <tspan x="61" y="239">this. </tspan>
+                </text>
+            </g>
+            <g id="Message-2-Copy" transform="translate(143.000000, 1653.000000)">
+                <rect id="Rectangle-18" fill="#BFB3A2" x="0" y="0" width="1143" height="451.525787" rx="60"></rect>
+                <text id="Haha,-yeah,-so-kids" font-family="Raleway-Regular, Raleway" font-size="50" font-weight="normal" fill="#000000">
+                    <tspan x="61" y="62">Haha, yeah, so kids do party a lot on campus </tspan>
+                    <tspan x="61" y="121">in this area called the suites. The parties are </tspan>
+                    <tspan x="61" y="180">ok, but for people who want some “cooler” </tspan>
+                    <tspan x="61" y="239">parties do go off campus at times. As for </tspan>
+                    <tspan x="61" y="298">Frats, a decent amount of kids are in them, </tspan>
+                    <tspan x="61" y="357">but there def isn’t a ton of pressure. I actually </tspan>
+                    <tspan x="61" y="416">got a bid to a frat and didn’t do it. </tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
