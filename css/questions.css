@@ -158,7 +158,7 @@
   display: flex;
   /*min-width: 100%;*/
   flex-direction: column;
-  background : lightblue;
+  background : #4095AA;
   border-radius : 12px;
   -moz-border-radius : 12px;
   -webkit-border-radius : 12px;
@@ -258,7 +258,7 @@
 }
 
 .questionTALL:hover{
-  background : #4095AA;
+  background: lightblue;
 }
 
 .question_text{

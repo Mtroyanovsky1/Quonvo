@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat, removeQuestion } from 'actions/chatActions';
-import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUser } from 'reducers';
+import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUserName } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage, addQuestion, removeUserQuestionThunk } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
 import Modal from '../presentationalComponents/Modal';
@@ -121,13 +121,7 @@ class QuestionBarWrapper extends Component {
         onMouseLeave: () => this.onMouseLeave()
       }
     );
-    let name;
 
-    if (this.props.firstName) {
-      name = this.props.firstName;
-    } else {
-      name = 'Anonymous';
-    }
     let handleField = name;
     const defaultHandle = 'Anonymous';
     return (
@@ -165,13 +159,14 @@ const mapStateToProps = (state) => {
   const page = getCurrentQuestionPage(state);
   const allQuestions = getQuestions(state);
   const currentQuestions = allQuestions.slice(numberOfQs * page, (numberOfQs * page) + numberOfQs);
+  console.log('user', getUserName(state))
   return {
     listOfQuestions: currentQuestions,
     allQuestions,
     currentPage: page,
     yourQuestion: getYourQuestion(state),
     yourQuestionReady: getYourQuestionReady(state),
-    user: getUser(state)
+    userName: getUserName(state)
   };
 };
 

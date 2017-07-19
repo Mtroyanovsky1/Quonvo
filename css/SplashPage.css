@@ -41,6 +41,25 @@
   width: 250px;
   border-radius: 15px;
 }
+
+.Splash_button{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10vw;
+  top: 6vh;
+}
+.arrow_splash{
+  width: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.arrow_splash:hover{
+  opacity: 0.8;
+  width: 55px;
+}
+
 .login_button {
   background-color: #8FC1D7;
   color: white;

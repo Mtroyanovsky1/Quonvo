@@ -18,6 +18,12 @@ class LoginPage extends Component {
       splash: false
     });
   }
+
+  goBack() {
+    this.setState({
+      splash: true
+    });
+  }
   render() {
     return (
       <Provider store={this.props.store}>
@@ -26,6 +32,9 @@ class LoginPage extends Component {
           <SplashPage onPressButton={() => this.onPress()} />
         :
           <div className="display_container">
+            <div className="Splash_button" onClick={() => this.goBack()}>
+              <img alt="" src="assets/back.svg" className="arrow_splash" />
+            </div>
             <div className="header_block">
               <span className="title"> WELCOME TO </span>
               <span className="title2"> Quonvo</span>

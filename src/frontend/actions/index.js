@@ -263,7 +263,7 @@ export const newQuestionThunk = (subject, content, handle) => (dispatch) => {
     socket.emit('newQuestion', { newQuestion: responseJson.newQuestion });
     const id = responseJson.newQuestion._id;
     dispatch(newQuestion(subject, content, id, handle));
-    dispatch(onQuestionCreate(id, handle));
+    dispatch(onQuestionCreate(id, handle, content));
   })
   .catch((err) => {
     // console.log('error');
