@@ -5,8 +5,7 @@ const AnswerQuestion = ({
   user
 }) => {
   const name = user.name;
-  let handleField;
-  const defaultHandle = 'Anonymous';
+  let handleField = name;
   return (
     <div className="answer_wrapper">
       <div className="answer_name">NAME</div>
@@ -14,10 +13,10 @@ const AnswerQuestion = ({
         // maxLength="8"
         // type="text"
         className="searchbar_handle"
-        defaultValue={defaultHandle}
+        defaultValue={name}
         onChange={(w) => { handleField = w.target.value; }}
       >
-        <option value={defaultHandle}> {defaultHandle} </option>
+        <option value={'Anonymous'}> {'Anonymous'} </option>
         <option value={name}> {name} </option>
       </select>
       <button

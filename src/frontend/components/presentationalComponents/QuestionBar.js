@@ -28,9 +28,9 @@ const QuestionBar = ({
         }}
       >
         {yourQuestionReady ?
-          <p style={{ textAlign: 'center', fontFamily: 'Roboto Slab', marginTop: '5px' }}> Someone is answering your question </p>
+          <p style={{ textAlign: 'center', fontFamily: 'Raleway', marginTop: '5px' }}> Someone is answering your question </p>
           :
-          <p style={{ textAlign: 'center', fontFamily: 'Roboto Slab', marginTop: '5px' }}> Looking for someone to answer your question </p>
+          <p style={{ textAlign: 'center', fontFamily: 'Raleway', marginTop: '5px' }}> Looking for someone to answer your question </p>
       }
         <LiveQuestion
           onQuestionClick={() => yourQuestionClick(yourQuestion.id)}

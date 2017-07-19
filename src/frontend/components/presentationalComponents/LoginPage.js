@@ -13,6 +13,7 @@ class LoginPage extends Component {
       splash: true
     };
   }
+
   onPress() {
     this.setState({
       splash: false
