@@ -128,6 +128,7 @@ export const getYourQuestion = state => state.yourQuestion.question;
 export const getYourQuestionReady = state => state.yourQuestion.ready;
 export const getCurrentQuestionPage = state => state.currentQuestionPage;
 export const getUser = state => state.newUser;
+export const getUserName = state => state.newUser;
 export const getChats = state => state.chats;
 export const getLoading = state => state.loading;
 export const getSplash = state => state.splash;

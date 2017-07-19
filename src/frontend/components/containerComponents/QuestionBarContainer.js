@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import io from 'socket.io-client';
 import { connect } from 'react-redux';
 import { onQuestionClick, openChat, removeQuestion } from 'actions/chatActions';
-import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUser } from 'reducers';
+import { getQuestions, getCurrentQuestionPage, getYourQuestion, getYourQuestionReady, getUserName } from 'reducers';
 import { loadMoreQuestionsThunk as loadMoreQuestions, nextQuestionPage, previousQuestionPage, firstQuestionPage, addQuestion, removeUserQuestionThunk } from 'actions';
 import QuestionBar from '../presentationalComponents/QuestionBar';
+import AnswerQuestion from '../presentationalComponents/AnswerQuestion';
 import Modal from '../presentationalComponents/Modal';
 
 
@@ -121,15 +122,7 @@ class QuestionBarWrapper extends Component {
         onMouseLeave: () => this.onMouseLeave()
       }
     );
-    let name;
 
-    if (this.props.firstName) {
-      name = this.props.firstName;
-    } else {
-      name = 'Anonymous';
-    }
-    let handleField = name;
-    const defaultHandle = 'Anonymous';
     return (
       <div className="question_wrapper">
         <Modal
@@ -137,23 +130,10 @@ class QuestionBarWrapper extends Component {
           isOpen={this.state.answerModalActive}
           onRequestClose={() => this.closeModal()}
         >
-          <div className="answer_name">NAME</div>
-          <select
-            // maxLength="8"
-            // type="text"
-            className="searchbar_handle"
-            defaultValue={defaultHandle}
-            onChange={(w) => { handleField = w.target.value; }}
-          >
-            <option value={defaultHandle}> {defaultHandle} </option>
-            <option value={name}> {name} </option>
-          </select>
-          <button
-            className="answer_button"
-            onClick={() => this.submitModal(handleField)}
-          >
-            Answer Question
-          </button>
+          <AnswerQuestion
+            submit={this.submitModal.bind(this)}
+            user={this.props.user}
+          />
         </Modal>
         <QuestionBar {...newProps} />
       </div>
@@ -171,7 +151,7 @@ const mapStateToProps = (state) => {
     currentPage: page,
     yourQuestion: getYourQuestion(state),
     yourQuestionReady: getYourQuestionReady(state),
-    user: getUser(state)
+    user: getUserName(state)
   };
 };
 

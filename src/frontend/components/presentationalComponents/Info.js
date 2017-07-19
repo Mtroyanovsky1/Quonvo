@@ -15,7 +15,10 @@ const Info = () => (
     </p>
     <p className="info_text">
     And if you have a good conversation with someone, give them 5 stars!
-    Go enjoy and have a some good Quonvos
+    Go enjoy and have some good Quonvos
+    </p>
+    <p className="info_text">
+    Oh and if eveything looks weird, switch to Chrome :)
     </p>
   </div>
   );

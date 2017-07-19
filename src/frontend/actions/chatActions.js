@@ -70,7 +70,8 @@ export const onQuestionClick = (questionId, theirHandle, yourHandle, questionCon
   apiUpdateQuestion(questionId);
 };
 
-export const onQuestionCreate = (questionId, handle) => (dispatch) => {
+export const onQuestionCreate = (questionId, handle, questionContent) => (dispatch) => {
   dispatch(joinRoom(questionId, questionId));
   dispatch(setHandle(handle, questionId));
+  dispatch(setQuestion(questionContent, questionId));
 };
