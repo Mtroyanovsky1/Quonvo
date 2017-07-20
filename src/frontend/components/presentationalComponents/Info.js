@@ -4,11 +4,10 @@ const Info = () => (
   <div className="info_full">
     <h1 className="info_title"> Welcome to Quonvo </h1>
     <p className="info_text">
-    Click on a question on the left to chat with someone about something they are curious about
+    Quonvo time for admissions is now over! But you can read anonymous conversations that happened by clickng on the archives button
     </p>
     <p className="info_text">
-    If you want to read previous conversations that have been anonymized
-    click on the archives button on the right side
+    Click on a question on the left to chat with someone about something they are curious about
     </p>
     <p className="info_text">
     if you answer a lot of questions, maybe you can be #1 on the rankings
