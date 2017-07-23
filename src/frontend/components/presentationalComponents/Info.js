@@ -4,10 +4,10 @@ const Info = () => (
   <div className="info_full">
     <h1 className="info_title"> Welcome to Quonvo </h1>
     <p className="info_text">
-    Quonvo time for admissions is now over! But you can read anonymous conversations that happened by clickng on the archives button
+    Welcome to Quonvo time for FME. Any questions you have, make sure to ask them. And if you can answer a question. Click on it and have a conversation.
     </p>
     <p className="info_text">
-    Click on a question on the left to chat with someone about something they are curious about
+    The person who answers the most questions and gets rated the highest will win a $10 Amazon gift card
     </p>
     <p className="info_text">
     if you answer a lot of questions, maybe you can be #1 on the rankings
