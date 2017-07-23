@@ -80,7 +80,7 @@ const pageNumber = (state = 0, action) => {
 };
 
 // TODO this in in the models and the reducers. Import from 1 location?
-const topics = () => ['Academics', 'Extracurriculars', 'Social', 'Miscellaneous'];
+const topics = () => ['FME', 'Academics', 'Social', 'Miscellaneous'];
 
 const EMPTY = 'empty-0';
 const ARCHIVES = 'archives-0';

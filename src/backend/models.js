@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const startingCoins = 100;
-const subjects = ['Academics', 'Extracurriculars', 'Social', 'Miscellaneous'];
+const subjects = ['FME', 'Academics', 'Social', 'Miscellaneous'];
 
 const userSchema = mongoose.Schema({
   createdTime: {
