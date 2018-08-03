@@ -3,7 +3,7 @@ import React from 'react';
 
 const SplashPage = ({ onPressButton }) => (
   <div>
-    <div onClick={onPressButton} className="main_container_splash">
+    <div onClick={} className="main_container_splash">
       <div className="logo_container_first" >
         <img alt="" className="logo_icon" src="assets/quonvologo.png" />
         <button type="button" className="login_button">Sorry We are not live anymore</button>
