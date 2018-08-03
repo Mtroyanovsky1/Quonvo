@@ -45,6 +45,7 @@ module.exports = (passport) => {
   };
 
   const customAuth = (req, res, next) => (err, user, info) => {
+    console.log('USER', user)
     if (err) {
       next(err);
     } else if (!user) {
